@@ -86,7 +86,7 @@ class ChatbotRestaurante:
 
     def _generar_respuesta_ia(self, conversacion, mensaje_cliente):
         """
-        Genera respuesta usando OpenAI GPT-4o.
+        Genera respuesta usando Ollama (local) o fallback si no está disponible.
         """
         restaurante = conversacion.get("restaurante")
         distrito = conversacion.get("distrito")
@@ -125,7 +125,7 @@ IMPORTANTE:
 
 Responde en español, de manera concisa (máximo 2-3 líneas)."""
 
-        # Construir mensajes para OpenAI
+        # Construir mensajes para Ollama
         messages = [{"role": "system", "content": system_prompt}]
 
         # Agregar historial reciente (últimos 10 mensajes)
@@ -136,22 +136,34 @@ Responde en español, de manera concisa (máximo 2-3 líneas)."""
             elif msg["rol"] == "sistema":
                 messages.append({"role": "assistant", "content": msg["mensaje"]})
 
-        # Llamar a OpenAI
+        # Intentar con Ollama primero (local, gratis)
         try:
-            import openai
-            client = openai.OpenAI()  # Usa OPENAI_API_KEY del entorno
+            import httpx
             
-            response = client.chat.completions.create(
-                model="gpt-4o-mini",  # Modelo más económico
-                messages=messages,
-                max_tokens=200,
-                temperature=0.7,
+            response = httpx.post(
+                "http://localhost:11434/api/chat",
+                json={
+                    "model": "qwen2.5:14b",  # Mejor para español
+                    "messages": messages,
+                    "stream": False,
+                    "options": {
+                        "temperature": 0.7,
+                        "num_predict": 200,  # Máximo tokens
+                    }
+                },
+                timeout=30.0,  # 30 segundos timeout
             )
-
-            return response.choices[0].message.content
-
+            
+            if response.status_code == 200:
+                result = response.json()
+                return result.get("message", {}).get("content", "")
+            else:
+                # Si Ollama falla, usar fallback
+                return self._generar_respuesta_fallback(mensaje_cliente)
+                
         except Exception as e:
-            # Fallback si no hay API key
+            # Si Ollama no está corriendo, usar fallback
+            print(f"Ollama no disponible: {e}")
             return self._generar_respuesta_fallback(mensaje_cliente)
 
     def _generar_respuesta_fallback(self, mensaje_cliente):

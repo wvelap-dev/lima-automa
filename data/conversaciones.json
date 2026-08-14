@@ -3,60 +3,36 @@
     "restaurante": "Cafe de Lima",
     "telefono": "+5112425555",
     "distrito": "Miraflores",
-    "estado": "CITA_AGENDADA",
+    "estado": "INICIADA",
     "historial": [
       {
         "rol": "sistema",
-        "mensaje": "¡Hola! Soy Claudia de Lima Automa 👋 Vi que tienen un restaurante increíble en Miraflores. Tengo una propuesta que les puede ayudar a conseguir más clientes sin costo inicial. ¿Les gustaría escuchar?",
-        "timestamp": "2026-08-15T01:37:09.257865"
+        "mensaje": "Hola, soy de Lima Automa. Vi que tienen un restaurante increible en Miraflores.",
+        "timestamp": "2026-08-15T01:45:42.631333"
       },
       {
         "rol": "cliente",
-        "mensaje": "Hola, sí me interesa. ¿En qué consiste?",
-        "timestamp": "2026-08-15T01:37:09.257865"
+        "mensaje": "Hola, si me interesa. En que consiste?",
+        "timestamp": "2026-08-15T01:45:42.632440"
       },
       {
         "rol": "sistema",
-        "mensaje": "Hola! Soy Claudia de Lima Automa. Vi que tienen un restaurante increible. Les gustaria saber como conseguir mas clientes?",
-        "timestamp": "2026-08-15T01:37:09.678863"
+        "mensaje": "¡Genial! Te ayudamos a potenciar tu restaurante con una página web profesional gratis, mejoras en Google Maps y campañas de marketing digital dirigidas. ¡Explicaré todos los detalles en nuestra videollamada! ¿Te parece bien agendarla este semana?",
+        "timestamp": "2026-08-15T01:45:46.722233"
       },
       {
         "rol": "cliente",
-        "mensaje": "¿Cuánto cuesta?",
-        "timestamp": "2026-08-15T01:37:09.678863"
+        "mensaje": "Cuanto cuesta?",
+        "timestamp": "2026-08-15T01:45:46.722871"
       },
       {
         "rol": "sistema",
-        "mensaje": "Tenemos planes muy accesibles y personalizados para cada restaurante. En la videollamada te explico todo sin compromiso. Que dia te viene bien?",
-        "timestamp": "2026-08-15T01:37:09.678863"
-      },
-      {
-        "rol": "cliente",
-        "mensaje": "Suena bien. ¿Cuándo podemos hablar?",
-        "timestamp": "2026-08-15T01:37:09.679862"
-      },
-      {
-        "rol": "sistema",
-        "mensaje": "Perfecto. Tenemos disponibilidad de lunes a viernes de 9am a 5pm. Que dia y hora te viene bien?",
-        "timestamp": "2026-08-15T01:37:09.679862"
-      },
-      {
-        "rol": "cliente",
-        "mensaje": "El viernes a las 10am me viene bien",
-        "timestamp": "2026-08-15T01:37:09.679862"
-      },
-      {
-        "rol": "sistema",
-        "mensaje": "Perfecto! Anoto tu cita. Te enviare un recordatorio un dia antes. Confirmas?",
-        "timestamp": "2026-08-15T01:37:09.679862"
+        "mensaje": "No te preocupes por precios ahora, solo pagas por resultados. Te explico nuestros planes personalizados en la videollamada. ¿Tienes algún día y hora que te venga bien para agendarla?",
+        "timestamp": "2026-08-15T01:45:50.059883"
       }
     ],
     "calificacion": null,
-    "cita_agendada": {
-      "fecha": "2026-08-22",
-      "hora": "10:00",
-      "estado": "CONFIRMADA"
-    },
+    "cita_agendada": null,
     "notas": ""
   },
   "sala": {
