@@ -1,4 +1,4 @@
-const { appendFileSync, readFileSync, existsSync } = require('fs');
+const { appendFileSync, readFileSync, existsSync, mkdirSync, writeFileSync } = require('fs');
 const { join } = require('path');
 
 module.exports = (req, res) => {
@@ -27,30 +27,29 @@ module.exports = (req, res) => {
       ip: req.headers['x-forwarded-for'] || req.socket.remoteAddress,
     };
 
-    // Guardar en archivo JSON
-    const dataFile = join(process.cwd(), 'data', 'tracking.json');
-    let tracking = [];
-    
-    if (existsSync(dataFile)) {
-      try {
-        tracking = JSON.parse(readFileSync(dataFile, 'utf8'));
-      } catch (e) {
-        tracking = [];
-      }
-    }
+    console.log('[Tracking]', JSON.stringify(trackingData));
 
-    tracking.push(trackingData);
-    
-    // Guardar (en Vercel esto se pierde al reiniciar, pero sirve para demo)
+    // Intentar guardar en archivo (funciona local, no en Vercel)
     try {
-      const fs = require('fs');
-      fs.mkdirSync(join(process.cwd(), 'data'), { recursive: true });
-      fs.writeFileSync(dataFile, JSON.stringify(tracking, null, 2));
-    } catch (e) {
-      console.log('No se pudo guardar archivo (normal en Vercel)');
-    }
+      const dataDir = join(process.cwd(), 'data');
+      const dataFile = join(dataDir, 'tracking.json');
+      
+      mkdirSync(dataDir, { recursive: true });
+      
+      let tracking = [];
+      if (existsSync(dataFile)) {
+        try {
+          tracking = JSON.parse(readFileSync(dataFile, 'utf8'));
+        } catch (e) {
+          tracking = [];
+        }
+      }
 
-    console.log('[Tracking]', trackingData);
+      tracking.push(trackingData);
+      writeFileSync(dataFile, JSON.stringify(tracking, null, 2));
+    } catch (e) {
+      // Ignorar error en Vercel (no puede escribir archivos)
+    }
 
     res.status(200).json({ success: true, data: trackingData });
   } else {

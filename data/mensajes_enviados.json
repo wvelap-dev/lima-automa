@@ -88,5 +88,35 @@
     "restaurante": "Mayta",
     "tipo": "INICIAL",
     "fecha": "2026-08-14T23:20:11.968296"
+  },
+  {
+    "lead_id": 1,
+    "restaurante": "Cafe de Lima",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-15T01:10:21.134882"
+  },
+  {
+    "lead_id": 2,
+    "restaurante": "La Panka",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-15T01:10:21.135882"
+  },
+  {
+    "lead_id": 3,
+    "restaurante": "Victoria",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-15T01:10:21.136882"
+  },
+  {
+    "lead_id": 4,
+    "restaurante": "Panchita",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-15T01:10:21.138385"
+  },
+  {
+    "lead_id": 5,
+    "restaurante": "Mayta",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-15T01:10:21.139390"
   }
 ]

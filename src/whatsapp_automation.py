@@ -78,8 +78,12 @@ class WhatsAppAutomation:
         telefono_limpio = "".join(c for c in telefono if c.isdigit() or c == "+")
         if not telefono_limpio.startswith("+"):
             telefono_limpio = "+51" + telefono_limpio
+        
+        # Asegurar que empiece con 51 (código de Perú)
+        if telefono_limpio.startswith("+51 ") or telefono_limpio.startswith("+511"):
+            telefono_limpio = "+51" + telefono_limpio.replace("+51 ", "").replace("+511", "1")
 
-        # Crear link de WhatsApp
+        # Crear link de WhatsApp (sin espacios ni caracteres especiales)
         mensaje_encoded = lead["mensaje_inicial"].replace(" ", "%20").replace("\n", "%0A")
         whatsapp_link = f"https://wa.me/{telefono_limpio.lstrip('+')}?text={mensaje_encoded}"
 

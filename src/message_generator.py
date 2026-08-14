@@ -16,6 +16,7 @@ def generar_mensaje_whatsapp(restaurant):
     tipo = restaurant.get("tipo", "restaurante")
     instagram = restaurant.get("instagram", "")
     website = restaurant.get("website", "")
+    distrito = restaurant.get("distrito", "Lima")
 
     # Detectar debilidades
     debilidades = []
@@ -33,16 +34,16 @@ def generar_mensaje_whatsapp(restaurant):
         # Restaurante que ya le va bien → enfoque en crecer más
         mensaje = f"""Hola, vi {nombre} en Google Maps. Tienen {reviews} reseñas con {rating} estrellas, eso está muy bien.
 
-Pero sabían que sus competidores en {tipo} están apareciendo PRIMERO en Google cuando alguien busca "{tipo} en Lima"?
+Pero sabían que sus competidores en {tipo} están apareciendo PRIMERO en Google cuando alguien busca "{tipo} en {distrito}"?
 
 Les puedo mostrar en 5 minutos cómo aparecer primero sin gastar en publicidad. ¿Cuándo les viene bien?"""
     elif "pocas reseñas" in debilidades:
         # Pocas reseñas → enfoque en visibilidad
-        mensaje = f"""Hola, soy fan de {tipo} y encontré {nombre} en Miraflores.
+        mensaje = f"""Hola, soy fan de {tipo} y encontré {nombre} en {distrito}.
 
 Vi que tienen solo {reviews} reseñas en Google. Sus competidores similares tienen 500+.
 
-¿Saben por qué eso importa? Cuando alguien busca "{tipo} en Lima", Google muestra PRIMERO a los que tienen más reseñas.
+¿Saben por qué eso importa? Cuando alguien busca "{tipo} en {distrito}", Google muestra PRIMERO a los que tienen más reseñas.
 
 Tengo una forma de ayudarles a conseguir 30-50 reseñas nuevas en 2 semanas. Sin costo inicial.
 
@@ -53,21 +54,21 @@ Tengo una forma de ayudarles a conseguir 30-50 reseñas nuevas en 2 semanas. Sin
 
 Está bien, pero hay espacio para llegar a 4.5+. ¿Saben cuántos clientes pierden por cada décima de estrella?
 
-Un restaurante de {tipo} similar en San Isidro subió de 4.1 a 4.6 en 3 meses y sus ventas subieron 40%.
+Un restaurante de {tipo} similar en {distrito} subió de 4.1 a 4.6 en 3 meses y sus ventas subieron 40%.
 
 ¿Quieren saber cómo lo hicieron? Les puedo explicar en 10 minutos."""
     elif "sin página web" in debilidades:
         # Sin web → enfoque en presencia digital
         mensaje = f"""Hola, encontré {nombre} en Google Maps. Buen {rating} estrellas.
 
-Pero no tienen página web. ¿Saben cuántos clientes buscan "{tipo} en Lima" y eligen al que tiene web?
+Pero no tienen página web. ¿Saben cuántos clientes buscan "{tipo} en {distrito}" y eligen al que tiene web?
 
 Puedo crearles una página profesional en 48 horas que aparezca en Google. Sin inversión inicial.
 
 ¿Les interesa ver un ejemplo?"""
     else:
         # Mensaje general
-        mensaje = f"""Hola, {nombre} apareció en mi búsqueda de {tipo} en Lima.
+        mensaje = f"""Hola, {nombre} apareció en mi búsqueda de {tipo} en {distrito}.
 
 Vi que tienen {rating} estrellas con {reviews} reseñas. Buen comienzo.
 

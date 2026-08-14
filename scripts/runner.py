@@ -46,9 +46,23 @@ def run_ciclo_completo():
     automation = WhatsAppAutomation()
 
     for r in all_restaurants[:10]:  # Top 10
+        # Extraer distrito de la dirección si no existe
+        if not r.get("distrito"):
+            direccion = r.get("direccion", "")
+            if ", " in direccion:
+                r["distrito"] = direccion.split(", ")[-1].strip()
+            else:
+                r["distrito"] = "Lima"
+
+        # Limpiar teléfono para WhatsApp
+        telefono = r.get("telefono", "")
+        r["telefono_limpio"] = "".join(c for c in telefono if c.isdigit() or c == "+")
+        if not r["telefono_limpio"].startswith("+"):
+            r["telefono_limpio"] = "+51" + r["telefono_limpio"]
+
         msg = generar_mensaje_whatsapp(r)
         lead = automation.registrar_lead(r, msg)
-        print(f"  Lead #{lead['id']}: {r['nombre']} (Score: {r['score']})")
+        print(f"  Lead #{lead['id']}: {r['nombre']} ({r['distrito']}) Score: {r['score']}")
 
     # 4. Preparar envios
     print("\n[4/5] Preparando envios WhatsApp...")
