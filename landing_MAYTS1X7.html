@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupon Mayta - Lima Automa</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .coupon {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .discount {
+            font-size: 72px;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+        }
+        .restaurant {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .code {
+            background: #f0f0f0;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .instructions {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        .validity {
+            color: #999;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        .powered {
+            color: #ccc;
+            font-size: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="coupon">
+        <div class="restaurant">Mayta</div>
+        <div class="discount">15%</div>
+        <div>DESCUENTO</div>
+        <div class="code">BIENVENIDO-MAYTA</div>
+        <div class="instructions">
+            Muestre este codigo al momento de pagar<br>
+            y obtendra su descuento
+        </div>
+        <div class="validity">Vigencia: 30 dias desde hoy</div>
+        <div class="powered">Powered by Lima Automa</div>
+    </div>
+</body>
+</html>
