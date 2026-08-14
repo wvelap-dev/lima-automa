@@ -148,13 +148,13 @@
             <div class="header">
                 <div class="avatar">CL</div>
                 <div class="header-info">
-                    <div class="header-name">Cafe de Lima</div>
+                    <div class="header-name">Claudia - Lima Automa</div>
                     <div class="header-status">online</div>
                 </div>
             </div>
             <div class="chat" id="chat">
                 <div class="message bot">
-                    Hola, soy de Lima Automa. Vi que tienen un restaurante increíble en Miraflores. Tengo una propuesta que les puede ayudar a conseguir más clientes sin costo inicial. ¿Les gustaría escuchar?
+                    ¡Hola! Soy Claudia de Lima Automa 👋 Vi que tienen un restaurante increíble en Miraflores. Tengo una propuesta que les puede ayudar a conseguir más clientes sin costo inicial. ¿Les gustaría escuchar?
                     <div class="time">10:00</div>
                 </div>
             </div>
@@ -189,10 +189,10 @@
         };
         
         const respuestasBot = {
-            'interes': '¡Excelente! Nuestro servicio ayuda a restaurantes como el tuyo a conseguir más clientes. Ofrecemos página web gratis, mejoras en Google Maps y campañas de marketing. ¿Te gustaría saber más?',
-            'precio': 'Tenemos planes muy accesibles y personalizados para cada restaurante. En una videollamada de 15 minutos te explico todo. ¿Qué día te viene bien?',
-            'cita': 'Perfecto. ¿Qué día y hora te viene bien? Tenemos disponibilidad de lunes a viernes de 9am a 5pm.',
-            'adios': '¡Hasta luego! Si cambias de opinión, aquí estamos para ayudarte. ¡Éxitos!'
+            'interes': '¡Qué bueno! 😊 Te explico: ayudamos a restaurantes a conseguir más clientes con página web gratis y marketing digital. ¿Te gustaría agendar una videollamada de 15 minutos?',
+            'precio': 'Tenemos planes muy accesibles y personalizados para cada restaurante. En la videollamada te explico todo sin compromiso. ¿Qué día te viene bien?',
+            'cita': 'Perfecto 📅 Tenemos disponibilidad de lunes a viernes de 9am a 5pm. ¿Qué día y hora te viene bien?',
+            'adios': '¡Hasta luego! 👋 Si cambias de opinión, aquí estamos para ayudarte. ¡Éxitos con el restaurante!'
         };
         
         function agregarMensaje(texto, esBot) {
@@ -216,7 +216,7 @@
             
             setTimeout(() => {
                 const respuesta = respuestasBot[texto.toLowerCase()] || 
-                    'Gracias por tu mensaje. ¿Te gustaría que te mostremos cómo podemos ayudar a tu restaurante?';
+                    '¡Hola! Soy Claudia de Lima Automa. Estoy aquí para ayudarte a conseguir más clientes para tu restaurante. ¿Te gustaría saber cómo?';
                 agregarMensaje(respuesta, true);
             }, 1000);
         }
