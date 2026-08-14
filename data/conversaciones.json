@@ -1,0 +1,142 @@
+{
+  "cafe_de_lima": {
+    "restaurante": "Cafe de Lima",
+    "telefono": "+5112425555",
+    "distrito": "Miraflores",
+    "estado": "CITA_AGENDADA",
+    "historial": [
+      {
+        "rol": "sistema",
+        "mensaje": "Hola, soy de Lima Automa. Vi que tienen un restaurante increíble en Miraflores. Tengo una propuesta que les puede ayudar a conseguir más clientes sin costo inicial. ¿Les gustaría escuchar?",
+        "timestamp": "2026-08-15T01:26:29.772398"
+      },
+      {
+        "rol": "cliente",
+        "mensaje": "Hola, sí me interesa. ¿En qué consiste?",
+        "timestamp": "2026-08-15T01:26:29.773902"
+      },
+      {
+        "rol": "sistema",
+        "mensaje": "¡Hola! Gracias por contactarnos. ¿En qué podemos ayudarlos?",
+        "timestamp": "2026-08-15T01:26:31.339032"
+      },
+      {
+        "rol": "cliente",
+        "mensaje": "¿Cuánto cuesta?",
+        "timestamp": "2026-08-15T01:26:31.339032"
+      },
+      {
+        "rol": "sistema",
+        "mensaje": "Gracias por tu mensaje. ¿Te gustaría que te mostremos cómo podemos ayudar a tu restaurante? Tenemos disponibilidad para una videollamada de 15 minutos.",
+        "timestamp": "2026-08-15T01:26:31.339032"
+      },
+      {
+        "rol": "cliente",
+        "mensaje": "Suena bien. ¿Cuándo podemos hablar?",
+        "timestamp": "2026-08-15T01:26:31.340032"
+      },
+      {
+        "rol": "sistema",
+        "mensaje": "Gracias por tu mensaje. ¿Te gustaría que te mostremos cómo podemos ayudar a tu restaurante? Tenemos disponibilidad para una videollamada de 15 minutos.",
+        "timestamp": "2026-08-15T01:26:31.340032"
+      },
+      {
+        "rol": "cliente",
+        "mensaje": "El viernes a las 10am me viene bien",
+        "timestamp": "2026-08-15T01:26:31.340032"
+      },
+      {
+        "rol": "sistema",
+        "mensaje": "Gracias por tu mensaje. ¿Te gustaría que te mostremos cómo podemos ayudar a tu restaurante? Tenemos disponibilidad para una videollamada de 15 minutos.",
+        "timestamp": "2026-08-15T01:26:31.340032"
+      }
+    ],
+    "calificacion": null,
+    "cita_agendada": {
+      "fecha": "2026-08-22",
+      "hora": "10:00",
+      "estado": "CONFIRMADA"
+    },
+    "notas": ""
+  },
+  "sala": {
+    "restaurante": "Sala",
+    "telefono": "+51 1 245 2002",
+    "distrito": "",
+    "estado": "INICIADA",
+    "historial": [
+      {
+        "rol": "sistema",
+        "mensaje": "Hola, soy fan de Alta Cocina y encontré Sala en Miraflores.\n\nVi que tienen solo 345 reseñas en Google. Sus competidores similares tienen 500+.\n\n¿Saben por qué eso importa? Cuando alguien busca \"Alta Cocina en Lima\", Google muestra PRIMERO a los que tienen más reseñas.\n\nTengo una forma de ayudarles a conseguir 30-50 reseñas nuevas en 2 semanas. Sin costo inicial.\n\n¿Les muestro cómo funciona? 15 minutos por videollamada.",
+        "timestamp": "2026-08-15T01:26:56.207497"
+      }
+    ],
+    "calificacion": null,
+    "cita_agendada": null,
+    "notas": ""
+  },
+  "la_mar_cevicheria": {
+    "restaurante": "La Mar Cevicheria",
+    "telefono": "+51 1 441 7777",
+    "distrito": "",
+    "estado": "INICIADA",
+    "historial": [
+      {
+        "rol": "sistema",
+        "mensaje": "Hola, vi La Mar Cevicheria en Google Maps. Tienen 2847 reseñas con 4.5 estrellas, eso está muy bien.\n\nPero sabían que sus competidores en Cevicheria están apareciendo PRIMERO en Google cuando alguien busca \"Cevicheria en Lima\"?\n\nLes puedo mostrar en 5 minutos cómo aparecer primero sin gastar en publicidad. ¿Cuándo les viene bien?",
+        "timestamp": "2026-08-15T01:26:56.208346"
+      }
+    ],
+    "calificacion": null,
+    "cita_agendada": null,
+    "notas": ""
+  },
+  "el_mercado": {
+    "restaurante": "El Mercado",
+    "telefono": "+51 1 421 3883",
+    "distrito": "",
+    "estado": "INICIADA",
+    "historial": [
+      {
+        "rol": "sistema",
+        "mensaje": "Hola, vi El Mercado en Google Maps. Tienen 1823 reseñas con 4.6 estrellas, eso está muy bien.\n\nPero sabían que sus competidores en Cocina Peruana están apareciendo PRIMERO en Google cuando alguien busca \"Cocina Peruana en Lima\"?\n\nLes puedo mostrar en 5 minutos cómo aparecer primero sin gastar en publicidad. ¿Cuándo les viene bien?",
+        "timestamp": "2026-08-15T01:26:56.208346"
+      }
+    ],
+    "calificacion": null,
+    "cita_agendada": null,
+    "notas": ""
+  },
+  "osso_carnes_premium": {
+    "restaurante": "Osso Carnes Premium",
+    "telefono": "+51 1 221 7788",
+    "distrito": "",
+    "estado": "INICIADA",
+    "historial": [
+      {
+        "rol": "sistema",
+        "mensaje": "Hola, vi Osso Carnes Premium en Google Maps. Tienen 923 reseñas con 4.7 estrellas, eso está muy bien.\n\nPero sabían que sus competidores en Parrilla están apareciendo PRIMERO en Google cuando alguien busca \"Parrilla en Lima\"?\n\nLes puedo mostrar en 5 minutos cómo aparecer primero sin gastar en publicidad. ¿Cuándo les viene bien?",
+        "timestamp": "2026-08-15T01:26:56.208346"
+      }
+    ],
+    "calificacion": null,
+    "cita_agendada": null,
+    "notas": ""
+  },
+  "tanta": {
+    "restaurante": "Tanta",
+    "telefono": "+51 1 610 9000",
+    "distrito": "",
+    "estado": "INICIADA",
+    "historial": [
+      {
+        "rol": "sistema",
+        "mensaje": "Hola, vi Tanta en Google Maps. Tienen 2134 reseñas con 4.3 estrellas, eso está muy bien.\n\nPero sabían que sus competidores en Cocina Peruana están apareciendo PRIMERO en Google cuando alguien busca \"Cocina Peruana en Lima\"?\n\nLes puedo mostrar en 5 minutos cómo aparecer primero sin gastar en publicidad. ¿Cuándo les viene bien?",
+        "timestamp": "2026-08-15T01:26:56.209350"
+      }
+    ],
+    "calificacion": null,
+    "cita_agendada": null,
+    "notas": ""
+  }
+}

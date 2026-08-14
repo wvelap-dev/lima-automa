@@ -10,6 +10,7 @@ from scraper_restaurantes import buscar_restaurantes, calcular_score_prioridad
 from message_generator import generar_mensaje_whatsapp
 from whatsapp_automation import WhatsAppAutomation
 from coupon_generator import crear_cupon, generar_qr_svg, crear_landing_page_html, generar_reporte_cupones
+from chatbot_ia import ChatbotRestaurante
 import json
 
 
@@ -237,7 +238,13 @@ if __name__ == "__main__":
         elif command == "qr":
             from generar_qr import generar_todos_los_qr
             generar_todos_los_qr()
+        elif command == "chatbot":
+            from chatbot_leads import iniciar_chatbots_leads
+            iniciar_chatbots_leads()
+        elif command == "chatbot_estado":
+            from chatbot_leads import ver_estado_chatbots
+            ver_estado_chatbots()
         else:
-            print("Comandos: ciclo, seguimientos, dashboard, cupones, qr")
+            print("Comandos: ciclo, seguimientos, dashboard, cupones, qr, chatbot, chatbot_estado")
     else:
         run_ciclo_completo()
