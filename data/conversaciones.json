@@ -7,28 +7,38 @@
     "historial": [
       {
         "rol": "sistema",
-        "mensaje": "Hola, soy de Lima Automa. Vi que tienen un restaurante increible en Miraflores.",
-        "timestamp": "2026-08-15T01:45:42.631333"
+        "mensaje": "Hola, soy de Lima Automa. Vi que tienen un restaurante increíble en Miraflores.",
+        "timestamp": "2026-08-15T01:46:35.251055"
       },
       {
         "rol": "cliente",
-        "mensaje": "Hola, si me interesa. En que consiste?",
-        "timestamp": "2026-08-15T01:45:42.632440"
+        "mensaje": "Hola, sí me interesa. ¿En qué consiste?",
+        "timestamp": "2026-08-15T01:46:35.252056"
       },
       {
         "rol": "sistema",
-        "mensaje": "¡Genial! Te ayudamos a potenciar tu restaurante con una página web profesional gratis, mejoras en Google Maps y campañas de marketing digital dirigidas. ¡Explicaré todos los detalles en nuestra videollamada! ¿Te parece bien agendarla este semana?",
-        "timestamp": "2026-08-15T01:45:46.722233"
+        "mensaje": "¡Genial! Ofrecemos una página web profesional gratis para tu restaurante, mejora en Google Maps, sistema de reseñas automáticas y campañas de marketing digital dirigidas. Explicamos los detalles y planes personalizados en la videollamada. ¿Te parece bien agendar una cita?",
+        "timestamp": "2026-08-15T01:46:39.322065"
       },
       {
         "rol": "cliente",
-        "mensaje": "Cuanto cuesta?",
-        "timestamp": "2026-08-15T01:45:46.722871"
+        "mensaje": "¿Cuánto cuesta?",
+        "timestamp": "2026-08-15T01:46:39.323323"
       },
       {
         "rol": "sistema",
-        "mensaje": "No te preocupes por precios ahora, solo pagas por resultados. Te explico nuestros planes personalizados en la videollamada. ¿Tienes algún día y hora que te venga bien para agendarla?",
-        "timestamp": "2026-08-15T01:45:50.059883"
+        "mensaje": "No hay costo inicial, solo pagas por resultados. En la videollamada te explico mejor cómo funciona nuestro modelo de negocio y cuáles son los planes personalizados para tu restaurante. ¿Te gustaría agendar una cita?",
+        "timestamp": "2026-08-15T01:46:43.167957"
+      },
+      {
+        "rol": "cliente",
+        "mensaje": "Suena bien. ¿Cuándo podemos hablar?",
+        "timestamp": "2026-08-15T01:46:43.169517"
+      },
+      {
+        "rol": "sistema",
+        "mensaje": "¡Perfecto! ¿Qué día y hora te conviene para una videollamada de 15 minutos? Estoy a disposición esta semana. 😊",
+        "timestamp": "2026-08-15T01:46:46.446760"
       }
     ],
     "calificacion": null,
