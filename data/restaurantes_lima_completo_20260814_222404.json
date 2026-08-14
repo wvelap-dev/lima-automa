@@ -1,0 +1,227 @@
+[
+  {
+    "nombre": "Cafe de Lima",
+    "direccion": "C. Bellavista 152, Miraflores",
+    "telefono": "+51 1 242 5555",
+    "rating": 4.2,
+    "reviews": 456,
+    "instagram": "@cafedelima",
+    "website": "",
+    "horario": "Lun-Dom 7:00-22:00",
+    "tipo": "Cafeteria",
+    "score": 40,
+    "razones": [
+      " 456 reseñas (puede mejorar)",
+      " Calificación 4.2 (hay espacio de mejora)",
+      " Sin página web"
+    ]
+  },
+  {
+    "nombre": "La Panka",
+    "direccion": "Av. La Paz 690, Miraflores",
+    "telefono": "+51 1 447 4646",
+    "rating": 4.1,
+    "reviews": 234,
+    "instagram": "@lapankabistr",
+    "website": "",
+    "horario": "Lun-Dom 12:00-23:00",
+    "tipo": "Bistró Peruano",
+    "score": 40,
+    "razones": [
+      " 234 reseñas (puede mejorar)",
+      " Calificación 4.1 (hay espacio de mejora)",
+      " Sin página web"
+    ]
+  },
+  {
+    "nombre": "Victoria",
+    "direccion": "Av. Alte. Grau 210, Barranco",
+    "telefono": "+51 1 247 2404",
+    "rating": 4.3,
+    "reviews": 456,
+    "instagram": "@victoriarest",
+    "website": "",
+    "horario": "Lun-Dom 8:00-23:00",
+    "tipo": "Cocina Peruana",
+    "score": 30,
+    "razones": [
+      " 456 reseñas (puede mejorar)",
+      " Sin página web"
+    ]
+  },
+  {
+    "nombre": "Panchita",
+    "direccion": "Av. 2 de Mayo 281, Miraflores",
+    "telefono": "+51 1 421 2218",
+    "rating": 4.4,
+    "reviews": 1567,
+    "instagram": "@panchita_gastonomia",
+    "website": "",
+    "horario": "Lun-Dom 12:00-16:00, 19:00-23:00",
+    "tipo": "Parrilla",
+    "score": 15,
+    "razones": [
+      " Sin página web"
+    ]
+  },
+  {
+    "nombre": "Mayta",
+    "direccion": "C. Los Búcaros 355, San Isidro",
+    "telefono": "+51 1 440 2828",
+    "rating": 4.7,
+    "reviews": 567,
+    "instagram": "@maytarest",
+    "website": "",
+    "horario": "Mar-Sab 19:00-23:00",
+    "tipo": "Cocina Peruana",
+    "score": 15,
+    "razones": [
+      " Sin página web"
+    ]
+  },
+  {
+    "nombre": "Sala",
+    "direccion": "C. San Francisco 280, Barranco",
+    "telefono": "+51 1 245 2002",
+    "rating": 4.6,
+    "reviews": 345,
+    "instagram": "@salabarranco",
+    "website": "https://salarestaurant.com",
+    "horario": "Mar-Dom 19:00-23:00",
+    "tipo": "Alta Cocina",
+    "score": 15,
+    "razones": [
+      " 345 reseñas (puede mejorar)"
+    ]
+  },
+  {
+    "nombre": "La Mar Cevicheria",
+    "direccion": "Av. La Mar 770, Miraflores",
+    "telefono": "+51 1 441 7777",
+    "rating": 4.5,
+    "reviews": 2847,
+    "instagram": "@lamarlima",
+    "website": "https://lamar.com.pe",
+    "horario": "Lun-Dom 12:00-17:00, 19:00-23:00",
+    "tipo": "Cevicheria",
+    "score": 0,
+    "razones": []
+  },
+  {
+    "nombre": "El Mercado",
+    "direccion": "Av. Rafael Arias Segura 180, Miraflores",
+    "telefono": "+51 1 421 3883",
+    "rating": 4.6,
+    "reviews": 1823,
+    "instagram": "@elmercadolima",
+    "website": "https://elmercadorestaurant.com",
+    "horario": "Lun-Sab 7:00-17:00",
+    "tipo": "Cocina Peruana",
+    "score": 0,
+    "razones": []
+  },
+  {
+    "nombre": "Osso Carnes Premium",
+    "direccion": "C. Alcanfores 480, Miraflores",
+    "telefono": "+51 1 221 7788",
+    "rating": 4.7,
+    "reviews": 923,
+    "instagram": "@ossocarnes",
+    "website": "https://ossocarnes.com",
+    "horario": "Lun-Dom 12:00-23:00",
+    "tipo": "Parrilla",
+    "score": 0,
+    "razones": []
+  },
+  {
+    "nombre": "Tanta",
+    "direccion": "Av. La Paz 1045, Miraflores",
+    "telefono": "+51 1 610 9000",
+    "rating": 4.3,
+    "reviews": 2134,
+    "instagram": "@tantagastonomia",
+    "website": "https://tanta.com.pe",
+    "horario": "Lun-Dom 12:00-23:00",
+    "tipo": "Cocina Peruana",
+    "score": 0,
+    "razones": []
+  },
+  {
+    "nombre": "Maido",
+    "direccion": "C. San Martin 595, Miraflores",
+    "telefono": "+51 1 447 2039",
+    "rating": 4.8,
+    "reviews": 1245,
+    "instagram": "@maido sushi",
+    "website": "https://maido.com",
+    "horario": "Mar-Dom 19:00-23:00",
+    "tipo": "Nikkei",
+    "score": 0,
+    "razones": []
+  },
+  {
+    "nombre": "Baco Vino y Bistró",
+    "direccion": "C. Cantuarias 164, Miraflores",
+    "telefono": "+51 1 446 0067",
+    "rating": 4.5,
+    "reviews": 678,
+    "instagram": "@baborvino",
+    "website": "https://baco.com.pe",
+    "horario": "Lun-Sab 17:00-23:00",
+    "tipo": "Bistro",
+    "score": 0,
+    "razones": []
+  },
+  {
+    "nombre": "Al Toque Pez",
+    "direccion": "C. Alcanfores 467, Miraflores",
+    "telefono": "+51 1 424 3510",
+    "rating": 4.6,
+    "reviews": 892,
+    "instagram": "@altoquepez",
+    "website": "https://altoquepez.com",
+    "horario": "Mar-Dom 19:00-23:30",
+    "tipo": "Mariscos",
+    "score": 0,
+    "razones": []
+  },
+  {
+    "nombre": "Central",
+    "direccion": "C. Santa Catalina 376, San Isidro",
+    "telefono": "+51 1 610 5049",
+    "rating": 4.9,
+    "reviews": 3456,
+    "instagram": "@centralrest",
+    "website": "https://centralrest.com",
+    "horario": "Mar-Sab 12:30-15:00, 19:30-22:30",
+    "tipo": "Alta Cocina",
+    "score": 0,
+    "razones": []
+  },
+  {
+    "nombre": "Rafael",
+    "direccion": "C. San Martin 308, San Isidro",
+    "telefono": "+51 1 426 6767",
+    "rating": 4.4,
+    "reviews": 1234,
+    "instagram": "@rafaelrest",
+    "website": "https://rafael.com.pe",
+    "horario": "Lun-Sab 12:30-16:00, 19:30-23:00",
+    "tipo": "Cocina Peruana",
+    "score": 0,
+    "razones": []
+  },
+  {
+    "nombre": "Ayahuasca",
+    "direccion": "C. Pezet 1001, Barranco",
+    "telefono": "+51 1 242 4013",
+    "rating": 4.5,
+    "reviews": 987,
+    "instagram": "@ayahuascabar",
+    "website": "https://ayahuascabar.com",
+    "horario": "Mar-Dom 18:00-02:00",
+    "tipo": "Bar Restaurant",
+    "score": 0,
+    "razones": []
+  }
+]

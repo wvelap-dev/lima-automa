@@ -1,0 +1,17 @@
+nombre,direccion,telefono,rating,reviews,instagram,website,horario,tipo,score,razones
+Cafe de Lima,"C. Bellavista 152, Miraflores",+51 1 242 5555,4.2,456,@cafedelima,,Lun-Dom 7:00-22:00,Cafeteria,40,"[' 456 reseñas (puede mejorar)', ' Calificación 4.2 (hay espacio de mejora)', ' Sin página web']"
+La Panka,"Av. La Paz 690, Miraflores",+51 1 447 4646,4.1,234,@lapankabistr,,Lun-Dom 12:00-23:00,Bistró Peruano,40,"[' 234 reseñas (puede mejorar)', ' Calificación 4.1 (hay espacio de mejora)', ' Sin página web']"
+Victoria,"Av. Alte. Grau 210, Barranco",+51 1 247 2404,4.3,456,@victoriarest,,Lun-Dom 8:00-23:00,Cocina Peruana,30,"[' 456 reseñas (puede mejorar)', ' Sin página web']"
+Panchita,"Av. 2 de Mayo 281, Miraflores",+51 1 421 2218,4.4,1567,@panchita_gastonomia,,"Lun-Dom 12:00-16:00, 19:00-23:00",Parrilla,15,[' Sin página web']
+Mayta,"C. Los Búcaros 355, San Isidro",+51 1 440 2828,4.7,567,@maytarest,,Mar-Sab 19:00-23:00,Cocina Peruana,15,[' Sin página web']
+Sala,"C. San Francisco 280, Barranco",+51 1 245 2002,4.6,345,@salabarranco,https://salarestaurant.com,Mar-Dom 19:00-23:00,Alta Cocina,15,[' 345 reseñas (puede mejorar)']
+La Mar Cevicheria,"Av. La Mar 770, Miraflores",+51 1 441 7777,4.5,2847,@lamarlima,https://lamar.com.pe,"Lun-Dom 12:00-17:00, 19:00-23:00",Cevicheria,0,[]
+El Mercado,"Av. Rafael Arias Segura 180, Miraflores",+51 1 421 3883,4.6,1823,@elmercadolima,https://elmercadorestaurant.com,Lun-Sab 7:00-17:00,Cocina Peruana,0,[]
+Osso Carnes Premium,"C. Alcanfores 480, Miraflores",+51 1 221 7788,4.7,923,@ossocarnes,https://ossocarnes.com,Lun-Dom 12:00-23:00,Parrilla,0,[]
+Tanta,"Av. La Paz 1045, Miraflores",+51 1 610 9000,4.3,2134,@tantagastonomia,https://tanta.com.pe,Lun-Dom 12:00-23:00,Cocina Peruana,0,[]
+Maido,"C. San Martin 595, Miraflores",+51 1 447 2039,4.8,1245,@maido sushi,https://maido.com,Mar-Dom 19:00-23:00,Nikkei,0,[]
+Baco Vino y Bistró,"C. Cantuarias 164, Miraflores",+51 1 446 0067,4.5,678,@baborvino,https://baco.com.pe,Lun-Sab 17:00-23:00,Bistro,0,[]
+Al Toque Pez,"C. Alcanfores 467, Miraflores",+51 1 424 3510,4.6,892,@altoquepez,https://altoquepez.com,Mar-Dom 19:00-23:30,Mariscos,0,[]
+Central,"C. Santa Catalina 376, San Isidro",+51 1 610 5049,4.9,3456,@centralrest,https://centralrest.com,"Mar-Sab 12:30-15:00, 19:30-22:30",Alta Cocina,0,[]
+Rafael,"C. San Martin 308, San Isidro",+51 1 426 6767,4.4,1234,@rafaelrest,https://rafael.com.pe,"Lun-Sab 12:30-16:00, 19:30-23:00",Cocina Peruana,0,[]
+Ayahuasca,"C. Pezet 1001, Barranco",+51 1 242 4013,4.5,987,@ayahuascabar,https://ayahuascabar.com,Mar-Dom 18:00-02:00,Bar Restaurant,0,[]

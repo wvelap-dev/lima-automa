@@ -1,0 +1,47 @@
+[
+  {
+    "restaurante": "Cafe de Lima",
+    "telefono": "+51 1 242 5555",
+    "score": 40,
+    "mensaje_inicial": "Hola, soy fan de Cafeteria y encontré Cafe de Lima en Miraflores.\n\nVi que tienen solo 456 reseñas en Google. Sus competidores similares tienen 500+.\n\n¿Saben por qué eso importa? Cuando alguien busca \"Cafeteria en Lima\", Google muestra PRIMERO a los que tienen más reseñas.\n\nTengo una forma de ayudarles a conseguir 30-50 reseñas nuevas en 2 semanas. Sin costo inicial.\n\n¿Les muestro cómo funciona? 15 minutos por videollamada.",
+    "seguimiento_dia1": "Hola, Cafe de Lima. Solo queria saber si vio mi mensaje anterior sobre como conseguir mas clientes. Estoy aqui para ayudarlos.",
+    "seguimiento_dia3": "Hola Cafe de Lima, le envie un ejemplo de como otro restaurante similar aumento sus ventas 30%. Se lo mando?",
+    "seguimiento_dia7": "Ultimo mensaje, Cafe de Lima. No quiero molestar. Si cambian de opinion, aqui estoy. Exitos."
+  },
+  {
+    "restaurante": "La Panka",
+    "telefono": "+51 1 447 4646",
+    "score": 40,
+    "mensaje_inicial": "Hola, soy fan de Bistró Peruano y encontré La Panka en Miraflores.\n\nVi que tienen solo 234 reseñas en Google. Sus competidores similares tienen 500+.\n\n¿Saben por qué eso importa? Cuando alguien busca \"Bistró Peruano en Lima\", Google muestra PRIMERO a los que tienen más reseñas.\n\nTengo una forma de ayudarles a conseguir 30-50 reseñas nuevas en 2 semanas. Sin costo inicial.\n\n¿Les muestro cómo funciona? 15 minutos por videollamada.",
+    "seguimiento_dia1": "Hola, La Panka. Solo queria saber si vio mi mensaje anterior sobre como conseguir mas clientes. Estoy aqui para ayudarlos.",
+    "seguimiento_dia3": "Hola La Panka, le envie un ejemplo de como otro restaurante similar aumento sus ventas 30%. Se lo mando?",
+    "seguimiento_dia7": "Ultimo mensaje, La Panka. No quiero molestar. Si cambian de opinion, aqui estoy. Exitos."
+  },
+  {
+    "restaurante": "Victoria",
+    "telefono": "+51 1 247 2404",
+    "score": 30,
+    "mensaje_inicial": "Hola, soy fan de Cocina Peruana y encontré Victoria en Miraflores.\n\nVi que tienen solo 456 reseñas en Google. Sus competidores similares tienen 500+.\n\n¿Saben por qué eso importa? Cuando alguien busca \"Cocina Peruana en Lima\", Google muestra PRIMERO a los que tienen más reseñas.\n\nTengo una forma de ayudarles a conseguir 30-50 reseñas nuevas en 2 semanas. Sin costo inicial.\n\n¿Les muestro cómo funciona? 15 minutos por videollamada.",
+    "seguimiento_dia1": "Hola, Victoria. Solo queria saber si vio mi mensaje anterior sobre como conseguir mas clientes. Estoy aqui para ayudarlos.",
+    "seguimiento_dia3": "Hola Victoria, le envie un ejemplo de como otro restaurante similar aumento sus ventas 30%. Se lo mando?",
+    "seguimiento_dia7": "Ultimo mensaje, Victoria. No quiero molestar. Si cambian de opinion, aqui estoy. Exitos."
+  },
+  {
+    "restaurante": "Panchita",
+    "telefono": "+51 1 421 2218",
+    "score": 15,
+    "mensaje_inicial": "Hola, encontré Panchita en Google Maps. Buen 4.4 estrellas.\n\nPero no tienen página web. ¿Saben cuántos clientes buscan \"Parrilla en Lima\" y eligen al que tiene web?\n\nPuedo crearles una página profesional en 48 horas que aparezca en Google. Sin inversión inicial.\n\n¿Les interesa ver un ejemplo?",
+    "seguimiento_dia1": "Hola, Panchita. Solo queria saber si vio mi mensaje anterior sobre como conseguir mas clientes. Estoy aqui para ayudarlos.",
+    "seguimiento_dia3": "Hola Panchita, le envie un ejemplo de como otro restaurante similar aumento sus ventas 30%. Se lo mando?",
+    "seguimiento_dia7": "Ultimo mensaje, Panchita. No quiero molestar. Si cambian de opinion, aqui estoy. Exitos."
+  },
+  {
+    "restaurante": "Mayta",
+    "telefono": "+51 1 440 2828",
+    "score": 15,
+    "mensaje_inicial": "Hola, encontré Mayta en Google Maps. Buen 4.7 estrellas.\n\nPero no tienen página web. ¿Saben cuántos clientes buscan \"Cocina Peruana en Lima\" y eligen al que tiene web?\n\nPuedo crearles una página profesional en 48 horas que aparezca en Google. Sin inversión inicial.\n\n¿Les interesa ver un ejemplo?",
+    "seguimiento_dia1": "Hola, Mayta. Solo queria saber si vio mi mensaje anterior sobre como conseguir mas clientes. Estoy aqui para ayudarlos.",
+    "seguimiento_dia3": "Hola Mayta, le envie un ejemplo de como otro restaurante similar aumento sus ventas 30%. Se lo mando?",
+    "seguimiento_dia7": "Ultimo mensaje, Mayta. No quiero molestar. Si cambian de opinion, aqui estoy. Exitos."
+  }
+]

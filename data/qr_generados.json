@@ -1,0 +1,182 @@
+[
+  {
+    "restaurante": "Cafe de Lima",
+    "codigo": "CAFEC96C",
+    "archivo_qr": "data/qr\\QR_CAFEC96C.png",
+    "url": "https://lima-aa91.vercel.app/cupon/CAFEC96C"
+  },
+  {
+    "restaurante": "La Panka",
+    "codigo": "LAPA9HOC",
+    "archivo_qr": "data/qr\\QR_LAPA9HOC.png",
+    "url": "https://lima-aa91.vercel.app/cupon/LAPA9HOC"
+  },
+  {
+    "restaurante": "Victoria",
+    "codigo": "VICT9NQF",
+    "archivo_qr": "data/qr\\QR_VICT9NQF.png",
+    "url": "https://lima-aa91.vercel.app/cupon/VICT9NQF"
+  },
+  {
+    "restaurante": "Panchita",
+    "codigo": "PANCJ8DU",
+    "archivo_qr": "data/qr\\QR_PANCJ8DU.png",
+    "url": "https://lima-aa91.vercel.app/cupon/PANCJ8DU"
+  },
+  {
+    "restaurante": "Mayta",
+    "codigo": "MAYTZR6H",
+    "archivo_qr": "data/qr\\QR_MAYTZR6H.png",
+    "url": "https://lima-aa91.vercel.app/cupon/MAYTZR6H"
+  },
+  {
+    "restaurante": "Sala",
+    "codigo": "SALA2HMF",
+    "archivo_qr": "data/qr\\QR_SALA2HMF.png",
+    "url": "https://lima-aa91.vercel.app/cupon/SALA2HMF"
+  },
+  {
+    "restaurante": "La Mar Cevicheria",
+    "codigo": "LAMATRH9",
+    "archivo_qr": "data/qr\\QR_LAMATRH9.png",
+    "url": "https://lima-aa91.vercel.app/cupon/LAMATRH9"
+  },
+  {
+    "restaurante": "El Mercado",
+    "codigo": "ELMEJD6Q",
+    "archivo_qr": "data/qr\\QR_ELMEJD6Q.png",
+    "url": "https://lima-aa91.vercel.app/cupon/ELMEJD6Q"
+  },
+  {
+    "restaurante": "Osso Carnes Premium",
+    "codigo": "OSSOLWOM",
+    "archivo_qr": "data/qr\\QR_OSSOLWOM.png",
+    "url": "https://lima-aa91.vercel.app/cupon/OSSOLWOM"
+  },
+  {
+    "restaurante": "Tanta",
+    "codigo": "TANTMLP4",
+    "archivo_qr": "data/qr\\QR_TANTMLP4.png",
+    "url": "https://lima-aa91.vercel.app/cupon/TANTMLP4"
+  },
+  {
+    "restaurante": "Cafe de Lima",
+    "codigo": "CAFEGBXO",
+    "archivo_qr": "data/qr\\QR_CAFEGBXO.png",
+    "url": "https://lima-aa91.vercel.app/cupon/CAFEGBXO"
+  },
+  {
+    "restaurante": "La Panka",
+    "codigo": "LAPA4684",
+    "archivo_qr": "data/qr\\QR_LAPA4684.png",
+    "url": "https://lima-aa91.vercel.app/cupon/LAPA4684"
+  },
+  {
+    "restaurante": "Victoria",
+    "codigo": "VICTSNMK",
+    "archivo_qr": "data/qr\\QR_VICTSNMK.png",
+    "url": "https://lima-aa91.vercel.app/cupon/VICTSNMK"
+  },
+  {
+    "restaurante": "Panchita",
+    "codigo": "PANCQJDL",
+    "archivo_qr": "data/qr\\QR_PANCQJDL.png",
+    "url": "https://lima-aa91.vercel.app/cupon/PANCQJDL"
+  },
+  {
+    "restaurante": "Mayta",
+    "codigo": "MAYTLGVO",
+    "archivo_qr": "data/qr\\QR_MAYTLGVO.png",
+    "url": "https://lima-aa91.vercel.app/cupon/MAYTLGVO"
+  },
+  {
+    "restaurante": "Sala",
+    "codigo": "SALAUNUF",
+    "archivo_qr": "data/qr\\QR_SALAUNUF.png",
+    "url": "https://lima-aa91.vercel.app/cupon/SALAUNUF"
+  },
+  {
+    "restaurante": "La Mar Cevicheria",
+    "codigo": "LAMA0632",
+    "archivo_qr": "data/qr\\QR_LAMA0632.png",
+    "url": "https://lima-aa91.vercel.app/cupon/LAMA0632"
+  },
+  {
+    "restaurante": "El Mercado",
+    "codigo": "ELMEVCJU",
+    "archivo_qr": "data/qr\\QR_ELMEVCJU.png",
+    "url": "https://lima-aa91.vercel.app/cupon/ELMEVCJU"
+  },
+  {
+    "restaurante": "Osso Carnes Premium",
+    "codigo": "OSSOOX7W",
+    "archivo_qr": "data/qr\\QR_OSSOOX7W.png",
+    "url": "https://lima-aa91.vercel.app/cupon/OSSOOX7W"
+  },
+  {
+    "restaurante": "Tanta",
+    "codigo": "TANTZ7I3",
+    "archivo_qr": "data/qr\\QR_TANTZ7I3.png",
+    "url": "https://lima-aa91.vercel.app/cupon/TANTZ7I3"
+  },
+  {
+    "restaurante": "Cafe de Lima",
+    "codigo": "CAFE1ST1",
+    "archivo_qr": "data/qr\\QR_CAFE1ST1.png",
+    "url": "https://lima-aa91.vercel.app/cupon/CAFE1ST1"
+  },
+  {
+    "restaurante": "La Panka",
+    "codigo": "LAPASQZZ",
+    "archivo_qr": "data/qr\\QR_LAPASQZZ.png",
+    "url": "https://lima-aa91.vercel.app/cupon/LAPASQZZ"
+  },
+  {
+    "restaurante": "Victoria",
+    "codigo": "VICT65NJ",
+    "archivo_qr": "data/qr\\QR_VICT65NJ.png",
+    "url": "https://lima-aa91.vercel.app/cupon/VICT65NJ"
+  },
+  {
+    "restaurante": "Panchita",
+    "codigo": "PANC1T7C",
+    "archivo_qr": "data/qr\\QR_PANC1T7C.png",
+    "url": "https://lima-aa91.vercel.app/cupon/PANC1T7C"
+  },
+  {
+    "restaurante": "Mayta",
+    "codigo": "MAYT13LG",
+    "archivo_qr": "data/qr\\QR_MAYT13LG.png",
+    "url": "https://lima-aa91.vercel.app/cupon/MAYT13LG"
+  },
+  {
+    "restaurante": "Sala",
+    "codigo": "SALAQBSE",
+    "archivo_qr": "data/qr\\QR_SALAQBSE.png",
+    "url": "https://lima-aa91.vercel.app/cupon/SALAQBSE"
+  },
+  {
+    "restaurante": "La Mar Cevicheria",
+    "codigo": "LAMA0PGD",
+    "archivo_qr": "data/qr\\QR_LAMA0PGD.png",
+    "url": "https://lima-aa91.vercel.app/cupon/LAMA0PGD"
+  },
+  {
+    "restaurante": "El Mercado",
+    "codigo": "ELMEIRJ5",
+    "archivo_qr": "data/qr\\QR_ELMEIRJ5.png",
+    "url": "https://lima-aa91.vercel.app/cupon/ELMEIRJ5"
+  },
+  {
+    "restaurante": "Osso Carnes Premium",
+    "codigo": "OSSOFRZ5",
+    "archivo_qr": "data/qr\\QR_OSSOFRZ5.png",
+    "url": "https://lima-aa91.vercel.app/cupon/OSSOFRZ5"
+  },
+  {
+    "restaurante": "Tanta",
+    "codigo": "TANTWEW8",
+    "archivo_qr": "data/qr\\QR_TANTWEW8.png",
+    "url": "https://lima-aa91.vercel.app/cupon/TANTWEW8"
+  }
+]

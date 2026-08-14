@@ -1,0 +1,92 @@
+[
+  {
+    "lead_id": 1,
+    "restaurante": "Cafe de Lima",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:00:44.515081"
+  },
+  {
+    "lead_id": 2,
+    "restaurante": "La Panka",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:00:44.516198"
+  },
+  {
+    "lead_id": 3,
+    "restaurante": "Victoria",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:00:44.516997"
+  },
+  {
+    "lead_id": 4,
+    "restaurante": "Panchita",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:00:44.516997"
+  },
+  {
+    "lead_id": 5,
+    "restaurante": "Mayta",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:00:44.518046"
+  },
+  {
+    "lead_id": 1,
+    "restaurante": "Cafe de Lima",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:00:57.061757"
+  },
+  {
+    "lead_id": 2,
+    "restaurante": "La Panka",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:00:57.062757"
+  },
+  {
+    "lead_id": 3,
+    "restaurante": "Victoria",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:00:57.063757"
+  },
+  {
+    "lead_id": 4,
+    "restaurante": "Panchita",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:00:57.063757"
+  },
+  {
+    "lead_id": 5,
+    "restaurante": "Mayta",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:00:57.063757"
+  },
+  {
+    "lead_id": 1,
+    "restaurante": "Cafe de Lima",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:20:11.963786"
+  },
+  {
+    "lead_id": 2,
+    "restaurante": "La Panka",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:20:11.965291"
+  },
+  {
+    "lead_id": 3,
+    "restaurante": "Victoria",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:20:11.966295"
+  },
+  {
+    "lead_id": 4,
+    "restaurante": "Panchita",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:20:11.967296"
+  },
+  {
+    "lead_id": 5,
+    "restaurante": "Mayta",
+    "tipo": "INICIAL",
+    "fecha": "2026-08-14T23:20:11.968296"
+  }
+]
