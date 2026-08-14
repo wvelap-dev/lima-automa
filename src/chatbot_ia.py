@@ -92,32 +92,38 @@ class ChatbotRestaurante:
         distrito = conversacion.get("distrito")
 
         # System prompt para el chatbot
-        system_prompt = f"""Eres un asistente de ventas de Lima Automa, una empresa que ayuda a restaurantes en Lima a conseguir más clientes.
+        system_prompt = f"""Eres Claudia, una asistente de ventas de Lima Automa. Hablas con restaurantes en Lima para ofrecer nuestros servicios de marketing digital.
 
 Tu objetivo es:
-1. Presentar nuestros servicios de manera atractiva
-2. Responder preguntas del restaurante
-3. Calificar si están interesados
-4. Agendar una cita de 15 minutos por videollamada
+1. Presentarte como Claudia de Lima Automa
+2. Explicar nuestros servicios de manera clara y atractiva
+3. Responder preguntas del restaurante
+4. Calificar si están interesados
+5. Agendar una cita de 15 minutos por videollamada
 
 Restaurante: {restaurante}
 Distrito: {distrito}
 
 Servicios que ofrecemos:
-- Página web profesional gratis
+- Página web profesional gratis para tu restaurante
 - Aparición en Google Maps mejorada
-- Sistema de reseñas automáticas
-- Campañas de marketing digital
+- Sistema de reseñas automáticas para mejorar tu calificación
+- Campañas de marketing digital dirigidas
 - **Sin costo inicial** - solo pagas por resultados
 
 IMPORTANTE:
-- Sé amigable y profesional
-- No hables de precios todavía
-- Enfócate en el beneficio para el restaurante
-- Si preguntan por precios, di que explicamos todo en la videollamada
-- Si quieren agendar, pregunta qué día les viene bien
+- Siempre preséntate como "Claudia de Lima Automa"
+- Sé amigable, profesional y natural
+- No hables de precios todavía, solo di que explicarás todo en la videollamada
+- Enfócate en el beneficio para el restaurante específico
+- Si preguntan por precios, di que explicarás los planes personalizados en la videollamada
+- Si quieren agendar, pregunta qué día y hora les viene bien
+- Si responden con hora como "4pm", confirma la cita
+- Si dicen "sí" o "si", pregunta si quieren agendar una cita
+- Varía tus respuestas, no repitas lo mismo
+- Usa emojis ocasionalmente para ser más cercana
 
-Responde en español, de manera concisa (máximo 3-4 líneas)."""
+Responde en español, de manera concisa (máximo 2-3 líneas)."""
 
         # Construir mensajes para OpenAI
         messages = [{"role": "system", "content": system_prompt}]
@@ -152,22 +158,50 @@ Responde en español, de manera concisa (máximo 3-4 líneas)."""
         """
         Respuesta de fallback si no hay API de OpenAI.
         """
-        mensaje_lower = mensaje_cliente.lower()
+        mensaje_lower = mensaje_cliente.lower().strip()
 
-        if any(word in mensaje_lower for word in ["hola", "buenos", "buenas"]):
-            return "¡Hola! Gracias por contactarnos. ¿En qué podemos ayudarlos?"
+        # Saludos
+        if any(word in mensaje_lower for word in ["hola", "buenos", "buenas", "hey"]):
+            return "Hola! Soy Claudia de Lima Automa. Vi que tienen un restaurante increible. Les gustaria saber como conseguir mas clientes?"
         
-        elif any(word in mensaje_lower for word in ["precio", "costo", "cuanto"]):
-            return "Tenemos planes muy accesibles. En la videollamada te explico todo personalizado. ¿Qué día te viene bien?"
+        # Interés
+        if any(word in mensaje_lower for word in ["interes", "interesa", "quiero", "si", "sí"]):
+            return "Que bueno! Te explico: ayudamos a restaurantes a conseguir mas clientes con pagina web gratis y marketing digital. Te gustaria agendar una videollamada de 15 minutos?"
         
-        elif any(word in mensaje_lower for word in ["cita", "videollamada", "reunion"]):
-            return "Perfecto. ¿Qué día y hora te viene bien? Tenemos disponibilidad de lunes a viernes."
+        # Precios
+        if any(word in mensaje_lower for word in ["precio", "costo", "cuanto", "cuánto", "cuanto cuesta"]):
+            return "Tenemos planes muy accesibles y personalizados para cada restaurante. En la videollamada te explico todo sin compromiso. Que dia te viene bien?"
         
-        elif any(word in mensaje_lower for word in ["interes", "interesa", "quiero"]):
-            return "¡Excelente! Vamos a agendar una cita para mostrarte todo. ¿Qué día te viene bien?"
+        # Agendar cita
+        if any(word in mensaje_lower for word in ["cita", "videollamada", "reunion", "reunión", "hablar", "cuando", "cuándo"]):
+            return "Perfecto. Tenemos disponibilidad de lunes a viernes de 9am a 5pm. Que dia y hora te viene bien?"
         
-        else:
-            return "Gracias por tu mensaje. ¿Te gustaría que te mostremos cómo podemos ayudar a tu restaurante? Tenemos disponibilidad para una videollamada de 15 minutos."
+        # Horas específicas
+        if any(word in mensaje_lower for word in ["am", "pm", "mañana", "tarde", "hora"]):
+            return "Perfecto! Anoto tu cita. Te enviare un recordatorio un dia antes. Confirmas?"
+        
+        # Confirmación
+        if any(word in mensaje_lower for word in ["confirmo", "confirmado", "ok", "dale", "bien", "perfecto"]):
+            return "Excelente! Tu cita esta confirmada. Te envio los datos por WhatsApp. Nos vemos pronto!"
+        
+        # Despedida
+        if any(word in mensaje_lower for word in ["adios", "adiós", "bye", "chau", "hasta luego", "nos vemos"]):
+            return "Hasta luego! Si cambias de opinion, aqui estamos para ayudarte. Exitos con el restaurante!"
+        
+        # Agradecimiento
+        if any(word in mensaje_lower for word in ["gracias", "thank"]):
+            return "Con gusto! Si tienes alguna otra pregunta, no dudes en preguntar. Te gustaria agendar una videollamada?"
+        
+        # Preguntas sobre servicios
+        if any(word in mensaje_lower for word in ["servicio", "servicios", "que hacen", "qué hacen", "ayuda"]):
+            return "Ofrecemos: pagina web gratis, mejoras en Google Maps, sistema de reseñas automaticas y marketing digital. Te gustaria saber mas?"
+        
+        # Preguntas sobre la empresa
+        if any(word in mensaje_lower for word in ["empresa", "quienes son", "quién eres", "lima automa"]):
+            return "Somos Lima Automa, ayudamos a restaurantes en Lima a conseguir mas clientes. Soy Claudia, tu asesora. En que te puedo ayudar?"
+        
+        # Respuesta genérica
+        return "Hola! Soy Claudia de Lima Automa. Estoy aqui para ayudarte a conseguir mas clientes para tu restaurante. Te gustaria saber como?"
 
     def calificar_interes(self, restaurante_id, calificacion):
         """

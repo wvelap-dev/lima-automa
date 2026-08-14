@@ -29,10 +29,10 @@ def main():
     # Iniciar conversación
     restaurante_id, conv = chatbot.iniciar_conversacion(
         restaurante,
-        "Hola, soy de Lima Automa. Vi que tienen un restaurante increíble en Miraflores. Tengo una propuesta que les puede ayudar a conseguir más clientes sin costo inicial. ¿Les gustaría escuchar?"
+        "¡Hola! Soy Claudia de Lima Automa 👋 Vi que tienen un restaurante increíble en Miraflores. Tengo una propuesta que les puede ayudar a conseguir más clientes sin costo inicial. ¿Les gustaría escuchar?"
     )
 
-    print(f"\n  [BOT] Mensaje inicial enviado")
+    print(f"\n  [CLAUDIA] Hola! Soy Claudia de Lima Automa. Vi que tienen un restaurante increible en Miraflores. Tengo una propuesta que les puede ayudar a conseguir mas clientes sin costo inicial. Les gustaria escuchar?")
 
     # Simular conversación
     mensajes_cliente = [
@@ -45,7 +45,7 @@ def main():
     for mensaje in mensajes_cliente:
         print(f"\n  [CLIENTE] {mensaje}")
         respuesta = chatbot.generar_respuesta(restaurante_id, mensaje)
-        print(f"  [BOT] {respuesta}")
+        print(f"  [CLAUDIA] {respuesta}")
 
     # Agendar cita
     chatbot.agendar_cita(restaurante_id, "2026-08-22", "10:00")

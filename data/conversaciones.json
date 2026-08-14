@@ -7,48 +7,48 @@
     "historial": [
       {
         "rol": "sistema",
-        "mensaje": "Hola, soy de Lima Automa. Vi que tienen un restaurante increíble en Miraflores. Tengo una propuesta que les puede ayudar a conseguir más clientes sin costo inicial. ¿Les gustaría escuchar?",
-        "timestamp": "2026-08-15T01:26:29.772398"
+        "mensaje": "¡Hola! Soy Claudia de Lima Automa 👋 Vi que tienen un restaurante increíble en Miraflores. Tengo una propuesta que les puede ayudar a conseguir más clientes sin costo inicial. ¿Les gustaría escuchar?",
+        "timestamp": "2026-08-15T01:37:09.257865"
       },
       {
         "rol": "cliente",
         "mensaje": "Hola, sí me interesa. ¿En qué consiste?",
-        "timestamp": "2026-08-15T01:26:29.773902"
+        "timestamp": "2026-08-15T01:37:09.257865"
       },
       {
         "rol": "sistema",
-        "mensaje": "¡Hola! Gracias por contactarnos. ¿En qué podemos ayudarlos?",
-        "timestamp": "2026-08-15T01:26:31.339032"
+        "mensaje": "Hola! Soy Claudia de Lima Automa. Vi que tienen un restaurante increible. Les gustaria saber como conseguir mas clientes?",
+        "timestamp": "2026-08-15T01:37:09.678863"
       },
       {
         "rol": "cliente",
         "mensaje": "¿Cuánto cuesta?",
-        "timestamp": "2026-08-15T01:26:31.339032"
+        "timestamp": "2026-08-15T01:37:09.678863"
       },
       {
         "rol": "sistema",
-        "mensaje": "Gracias por tu mensaje. ¿Te gustaría que te mostremos cómo podemos ayudar a tu restaurante? Tenemos disponibilidad para una videollamada de 15 minutos.",
-        "timestamp": "2026-08-15T01:26:31.339032"
+        "mensaje": "Tenemos planes muy accesibles y personalizados para cada restaurante. En la videollamada te explico todo sin compromiso. Que dia te viene bien?",
+        "timestamp": "2026-08-15T01:37:09.678863"
       },
       {
         "rol": "cliente",
         "mensaje": "Suena bien. ¿Cuándo podemos hablar?",
-        "timestamp": "2026-08-15T01:26:31.340032"
+        "timestamp": "2026-08-15T01:37:09.679862"
       },
       {
         "rol": "sistema",
-        "mensaje": "Gracias por tu mensaje. ¿Te gustaría que te mostremos cómo podemos ayudar a tu restaurante? Tenemos disponibilidad para una videollamada de 15 minutos.",
-        "timestamp": "2026-08-15T01:26:31.340032"
+        "mensaje": "Perfecto. Tenemos disponibilidad de lunes a viernes de 9am a 5pm. Que dia y hora te viene bien?",
+        "timestamp": "2026-08-15T01:37:09.679862"
       },
       {
         "rol": "cliente",
         "mensaje": "El viernes a las 10am me viene bien",
-        "timestamp": "2026-08-15T01:26:31.340032"
+        "timestamp": "2026-08-15T01:37:09.679862"
       },
       {
         "rol": "sistema",
-        "mensaje": "Gracias por tu mensaje. ¿Te gustaría que te mostremos cómo podemos ayudar a tu restaurante? Tenemos disponibilidad para una videollamada de 15 minutos.",
-        "timestamp": "2026-08-15T01:26:31.340032"
+        "mensaje": "Perfecto! Anoto tu cita. Te enviare un recordatorio un dia antes. Confirmas?",
+        "timestamp": "2026-08-15T01:37:09.679862"
       }
     ],
     "calificacion": null,
