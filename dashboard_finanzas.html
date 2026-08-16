@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lima Automa - Dashboard de Transacciones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .header h1 span { color: #00d9ff; }
+        .header p { opacity: 0.7; font-size: 14px; }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s;
+        }
+        .stat-card:hover { transform: translateY(-5px); }
+        .stat-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #00d9ff;
+        }
+        .stat-label {
+            font-size: 13px;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+        .stat-card.success .stat-value { color: #00e676; }
+        .stat-card.warning .stat-value { color: #ffab00; }
+        .stat-card.danger .stat-value { color: #ff5252; }
+        
+        .section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .section-title {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .badge {
+            background: #00d9ff;
+            color: #0f0c29;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        .chart-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 24px;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .chart-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #00d9ff;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: white;
+        }
+        th, td {
+            padding: 14px 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        th {
+            font-weight: 600;
+            opacity: 0.7;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        td { font-size: 14px; }
+        tr:hover { background: rgba(255,255,255,0.03); }
+        
+        .status {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .status.completado { background: rgba(0,230,118,0.2); color: #00e676; }
+        .status.pendiente { background: rgba(255,171,0,0.2); color: #ffab00; }
+        .status.cancelado { background: rgba(255,82,82,0.2); color: #ff5252; }
+        
+        .service-badge {
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .service-badge.traemos { background: rgba(0,217,255,0.2); color: #00d9ff; }
+        .service-badge.automatizacion { background: rgba(156,39,176,0.2); color: #ce93d8; }
+        .service-badge.agente { background: rgba(255,171,0,0.2); color: #ffab00; }
+        
+        .bar {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+        }
+        .bar-label {
+            width: 140px;
+            font-size: 13px;
+            color: white;
+        }
+        .bar-container {
+            flex: 1;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            height: 24px;
+            overflow: hidden;
+        }
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d9ff, #00e676);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        .bar-fill.comision { background: linear-gradient(90deg, #ffab00, #ff6d00); }
+        .bar-value {
+            width: 80px;
+            text-align: right;
+            font-size: 14px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            margin-top: 40px;
+            font-size: 12px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Lima<span>Automa</span> Finanzas</h1>
+            <p>Dashboard de Transacciones | 16/08/2026 23:42</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-value">S/ 2,785.00</div>
+                <div class="stat-label">Ingresos Totales</div>
+            </div>
+            <div class="stat-card success">
+                <div class="stat-icon">📈</div>
+                <div class="stat-value">S/ 86.25</div>
+                <div class="stat-label">Comisiones Ganadas</div>
+            </div>
+            <div class="stat-card warning">
+                <div class="stat-icon">🏪</div>
+                <div class="stat-value">S/ 398.75</div>
+                <div class="stat-label">Pagado a Restaurantes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-value">9</div>
+                <div class="stat-label">Total Transacciones</div>
+            </div>
+            <div class="stat-card success">
+                <div class="stat-icon">💵</div>
+                <div class="stat-value">S/ 309.44</div>
+                <div class="stat-label">Ticket Promedio</div>
+            </div>
+            <div class="stat-card danger">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-value">S/ 86.25</div>
+                <div class="stat-label">Ganancia Neta</div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <div class="chart-title">Ingresos por Servicio</div>
+                <div class="bar">
+                    <div class="bar-label">Traemos Clientes</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 35.5%"></div>
+                    </div>
+                    <div class="bar-value">S/ 355.00</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Automatización</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 8.5%"></div>
+                    </div>
+                    <div class="bar-value">S/ 85.00</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Agente Propio</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 4.5%"></div>
+                    </div>
+                    <div class="bar-value">S/ 45.00</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Auto. Setup</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 50.0%"></div>
+                    </div>
+                    <div class="bar-value">S/ 500.00</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Auto. Mensual</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 30.0%"></div>
+                    </div>
+                    <div class="bar-value">S/ 300.00</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Agente Setup</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 100.0%"></div>
+                    </div>
+                    <div class="bar-value">S/ 1,000.00</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Agente Mensual</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 50.0%"></div>
+                    </div>
+                    <div class="bar-value">S/ 500.00</div>
+                </div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">Comisiones por Restaurante</div>
+                <div class="bar">
+                    <div class="bar-label">Punto Azul</div>
+                    <div class="bar-container">
+                        <div class="bar-fill comision" style="width: 100.0%"></div>
+                    </div>
+                    <div class="bar-value">S/ 36.00</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Cevicheria El Puerto</div>
+                    <div class="bar-container">
+                        <div class="bar-fill comision" style="width: 55.55555555555556%"></div>
+                    </div>
+                    <div class="bar-value">S/ 20.00</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">El Pan de la Chola</div>
+                    <div class="bar-container">
+                        <div class="bar-fill comision" style="width: 41.66666666666667%"></div>
+                    </div>
+                    <div class="bar-value">S/ 15.00</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">La Mar Cevicheria</div>
+                    <div class="bar-container">
+                        <div class="bar-fill comision" style="width: 23.61111111111111%"></div>
+                    </div>
+                    <div class="bar-value">S/ 8.50</div>
+                </div>
+                <div class="bar">
+                    <div class="bar-label">Cafe de Lima</div>
+                    <div class="bar-container">
+                        <div class="bar-fill comision" style="width: 18.75%"></div>
+                    </div>
+                    <div class="bar-value">S/ 6.75</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <div class="chart-title">Métodos de Pago</div>
+                <table>
+                    <tr>
+                        <th>Método</th>
+                        <th>Cantidad</th>
+                        <th>Monto</th>
+                    </tr>
+                    <tr>
+                        <td>Plin</td>
+                        <td>3</td>
+                        <td>S/ 445.00</td>
+                    </tr>
+                    <tr>
+                        <td>Yape</td>
+                        <td>3</td>
+                        <td>S/ 660.00</td>
+                    </tr>
+                    <tr>
+                        <td>Mercado Pago</td>
+                        <td>1</td>
+                        <td>S/ 180.00</td>
+                    </tr>
+                    <tr>
+                        <td>Transferencia</td>
+                        <td>2</td>
+                        <td>S/ 1,500.00</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">Ventas por Día</div>
+                <table>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Pedidos</th>
+                        <th>Monto</th>
+                    </tr>
+                    <tr>
+                        <td>2026-08-16</td>
+                        <td>2</td>
+                        <td>S/ 120.00</td>
+                    </tr>
+                    <tr>
+                        <td>2026-08-15</td>
+                        <td>3</td>
+                        <td>S/ 365.00</td>
+                    </tr>
+                    <tr>
+                        <td>2026-08-01</td>
+                        <td>4</td>
+                        <td>S/ 2,300.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                Últimas Transacciones
+                <span class="badge">9</span>
+            </div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Restaurante</th>
+                    <th>Cliente</th>
+                    <th>Pedido</th>
+                    <th>Monto</th>
+                    <th>Comisión</th>
+                    <th>Restaurante</th>
+                    <th>Pago</th>
+                    <th>Estado</th>
+                </tr>
+                <tr>
+                    <td>TXN001</td>
+                    <td>2026-08-15</td>
+                    <td>Cevicheria El Puerto</td>
+                    <td>Juan Perez</td>
+                    <td>2 Ceviches, 1 Pisco Sour</td>
+                    <td>S/ 100.00</td>
+                    <td>S/ 20.00</td>
+                    <td>S/ 80.00</td>
+                    <td><span class="service-badge traemos">Plin</span></td>
+                    <td><span class="status completado">COMPLETADO</span></td>
+                </tr>
+                <tr>
+                    <td>TXN002</td>
+                    <td>2026-08-15</td>
+                    <td>La Mar Cevicheria</td>
+                    <td>Maria Garcia</td>
+                    <td>1 Arroz con Mariscos</td>
+                    <td>S/ 85.00</td>
+                    <td>S/ 8.50</td>
+                    <td>S/ 76.50</td>
+                    <td><span class="service-badge automatizacion">Yape</span></td>
+                    <td><span class="status completado">COMPLETADO</span></td>
+                </tr>
+                <tr>
+                    <td>TXN003</td>
+                    <td>2026-08-15</td>
+                    <td>Punto Azul</td>
+                    <td>Carlos Lopez</td>
+                    <td>3 Juegos de Ceviche</td>
+                    <td>S/ 180.00</td>
+                    <td>S/ 36.00</td>
+                    <td>S/ 144.00</td>
+                    <td><span class="service-badge traemos">Mercado Pago</span></td>
+                    <td><span class="status completado">COMPLETADO</span></td>
+                </tr>
+                <tr>
+                    <td>TXN004</td>
+                    <td>2026-08-16</td>
+                    <td>Cafe de Lima</td>
+                    <td>Ana Torres</td>
+                    <td>2 Cafe Latte, 1 Croissant</td>
+                    <td>S/ 45.00</td>
+                    <td>S/ 6.75</td>
+                    <td>S/ 38.25</td>
+                    <td><span class="service-badge agente">Plin</span></td>
+                    <td><span class="status completado">COMPLETADO</span></td>
+                </tr>
+                <tr>
+                    <td>TXN005</td>
+                    <td>2026-08-16</td>
+                    <td>El Pan de la Chola</td>
+                    <td>Pedro Sanchez</td>
+                    <td>1 Pizza Margarita, 2 Cervezas</td>
+                    <td>S/ 75.00</td>
+                    <td>S/ 15.00</td>
+                    <td>S/ 60.00</td>
+                    <td><span class="service-badge traemos">Yape</span></td>
+                    <td><span class="status completado">COMPLETADO</span></td>
+                </tr>
+                <tr>
+                    <td>SUS001</td>
+                    <td>2026-08-01</td>
+                    <td>Cevicheria El Puerto</td>
+                    <td>N/A</td>
+                    <td>Servicio: Automatizacion - Set</td>
+                    <td>S/ 500.00</td>
+                    <td>S/ 0.00</td>
+                    <td>S/ 0.00</td>
+                    <td><span class="service-badge automatizacion">Transferencia</span></td>
+                    <td><span class="status completado">COMPLETADO</span></td>
+                </tr>
+                <tr>
+                    <td>SUS002</td>
+                    <td>2026-08-01</td>
+                    <td>Cevicheria El Puerto</td>
+                    <td>N/A</td>
+                    <td>Servicio: Automatizacion - Men</td>
+                    <td>S/ 300.00</td>
+                    <td>S/ 0.00</td>
+                    <td>S/ 0.00</td>
+                    <td><span class="service-badge automatizacion">Plin</span></td>
+                    <td><span class="status completado">COMPLETADO</span></td>
+                </tr>
+                <tr>
+                    <td>SUS003</td>
+                    <td>2026-08-01</td>
+                    <td>La Mar Cevicheria</td>
+                    <td>N/A</td>
+                    <td>Servicio: Agente Propio - Setu</td>
+                    <td>S/ 1,000.00</td>
+                    <td>S/ 0.00</td>
+                    <td>S/ 0.00</td>
+                    <td><span class="service-badge agente">Transferencia</span></td>
+                    <td><span class="status completado">COMPLETADO</span></td>
+                </tr>
+                <tr>
+                    <td>SUS004</td>
+                    <td>2026-08-01</td>
+                    <td>La Mar Cevicheria</td>
+                    <td>N/A</td>
+                    <td>Servicio: Agente Propio - Mens</td>
+                    <td>S/ 500.00</td>
+                    <td>S/ 0.00</td>
+                    <td>S/ 0.00</td>
+                    <td><span class="service-badge agente">Yape</span></td>
+                    <td><span class="status completado">COMPLETADO</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            Powered by Lima Automa &copy; 2026 | Dashboard de Transacciones v1.0
+        </div>
+    </div>
+</body>
+</html>
