@@ -7,38 +7,28 @@
     "historial": [
       {
         "rol": "sistema",
-        "mensaje": "Hola, soy de Lima Automa. Vi que tienen un restaurante increíble en Miraflores.",
-        "timestamp": "2026-08-15T01:46:35.251055"
+        "mensaje": "Hola, soy de Lima Automa. Vi que tienen un restaurante increible en Miraflores.",
+        "timestamp": "2026-08-16T23:44:13.967472"
       },
       {
         "rol": "cliente",
-        "mensaje": "Hola, sí me interesa. ¿En qué consiste?",
-        "timestamp": "2026-08-15T01:46:35.252056"
+        "mensaje": "Hola, si me interesa. En que consiste?",
+        "timestamp": "2026-08-16T23:44:13.968976"
       },
       {
         "rol": "sistema",
-        "mensaje": "¡Genial! Ofrecemos una página web profesional gratis para tu restaurante, mejora en Google Maps, sistema de reseñas automáticas y campañas de marketing digital dirigidas. Explicamos los detalles y planes personalizados en la videollamada. ¿Te parece bien agendar una cita?",
-        "timestamp": "2026-08-15T01:46:39.322065"
+        "mensaje": "¡Genial! Ofrecemos servicios de marketing digital para traer más clientes a tu restaurante sin costo inicial, solo pagas comisión por cada cliente nuevo. También incluimos una página web profesional y mejor posicionamiento en Google Maps. Quisieras agendar una videollamada para hablar más de los detalles?",
+        "timestamp": "2026-08-16T23:44:34.330799"
       },
       {
         "rol": "cliente",
-        "mensaje": "¿Cuánto cuesta?",
-        "timestamp": "2026-08-15T01:46:39.323323"
+        "mensaje": "Cuanto cuesta?",
+        "timestamp": "2026-08-16T23:44:34.331936"
       },
       {
         "rol": "sistema",
-        "mensaje": "No hay costo inicial, solo pagas por resultados. En la videollamada te explico mejor cómo funciona nuestro modelo de negocio y cuáles son los planes personalizados para tu restaurante. ¿Te gustaría agendar una cita?",
-        "timestamp": "2026-08-15T01:46:43.167957"
-      },
-      {
-        "rol": "cliente",
-        "mensaje": "Suena bien. ¿Cuándo podemos hablar?",
-        "timestamp": "2026-08-15T01:46:43.169517"
-      },
-      {
-        "rol": "sistema",
-        "mensaje": "¡Perfecto! ¿Qué día y hora te conviene para una videollamada de 15 minutos? Estoy a disposición esta semana. 😊",
-        "timestamp": "2026-08-15T01:46:46.446760"
+        "mensaje": "¡Una gran pregunta! Nuestro modelo es único: no hay costo inicial, solo pagas una comisión por cada cliente nuevo que te traemos. Explicaremos todo con más detalle en la videollamada. ¿Te parece bien agendar una cita para conversar sobre cómo podemos ayudarte?",
+        "timestamp": "2026-08-16T23:44:38.287664"
       }
     ],
     "calificacion": null,

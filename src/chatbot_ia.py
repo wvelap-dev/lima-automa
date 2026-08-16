@@ -4,6 +4,7 @@ Lima Automa - Chatbot IA para Restaurantes
 Conversa automáticamente con restaurantes vía WhatsApp.
 """
 import json
+import os
 from datetime import datetime
 from pathlib import Path
 
@@ -86,7 +87,7 @@ class ChatbotRestaurante:
 
     def _generar_respuesta_ia(self, conversacion, mensaje_cliente):
         """
-        Genera respuesta usando Ollama (local) o fallback si no está disponible.
+        Genera respuesta usando Groq (gratis, rápido) o Ollama (local) o fallback.
         """
         restaurante = conversacion.get("restaurante")
         distrito = conversacion.get("distrito")
@@ -105,7 +106,8 @@ Restaurante: {restaurante}
 Distrito: {distrito}
 
 Servicios que ofrecemos:
-- Página web profesional gratis para tu restaurante
+- Traemos clientes nuevos a tu restaurante (solo pagas comisión por cada cliente)
+- Página web profesional gratis
 - Aparición en Google Maps mejorada
 - Sistema de reseñas automáticas para mejorar tu calificación
 - Campañas de marketing digital dirigidas
@@ -125,7 +127,7 @@ IMPORTANTE:
 
 Responde en español, de manera concisa (máximo 2-3 líneas)."""
 
-        # Construir mensajes para Ollama
+        # Construir mensajes
         messages = [{"role": "system", "content": system_prompt}]
 
         # Agregar historial reciente (últimos 10 mensajes)
@@ -136,7 +138,30 @@ Responde en español, de manera concisa (máximo 2-3 líneas)."""
             elif msg["rol"] == "sistema":
                 messages.append({"role": "assistant", "content": msg["mensaje"]})
 
-        # Intentar con Ollama primero (local, gratis)
+        # 1. Intentar con Groq primero (gratis, ultra rápido)
+        groq_key = os.environ.get("GROQ_API_KEY")
+        if groq_key:
+            try:
+                from openai import OpenAI
+                
+                client = OpenAI(
+                    api_key=groq_key,
+                    base_url="https://api.groq.com/openai/v1"
+                )
+                
+                response = client.chat.completions.create(
+                    model="llama-3.1-8b-instant",  # Modelo rápido y gratis
+                    messages=messages,
+                    max_tokens=200,
+                    temperature=0.7,
+                )
+                
+                return response.choices[0].message.content
+                
+            except Exception as e:
+                print(f"Groq no disponible: {e}")
+
+        # 2. Intentar con Ollama (local, gratis)
         try:
             import httpx
             
