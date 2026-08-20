@@ -1,0 +1,172 @@
+[
+  {
+    "name": "Cevichería El Puerto",
+    "address": "Av. La Marina 234, Miraflores",
+    "phone": "+5112425555",
+    "website": "www.elpuerto.com",
+    "rating": 3.8,
+    "reviews": 45,
+    "city": "Miraflores",
+    "type": "Cevichería"
+  },
+  {
+    "name": "La Mar Cevichería",
+    "address": "C. San Martín 601, Miraflores",
+    "phone": "+5114245566",
+    "website": "www.lamar.com",
+    "rating": 4.5,
+    "reviews": 230,
+    "city": "Miraflores",
+    "type": "Cevichería"
+  },
+  {
+    "name": "El Bodegón",
+    "address": "C. Alcanfores 189, Miraflores",
+    "phone": "+5114212233",
+    "website": "www.elbodegon.com",
+    "rating": 4.3,
+    "reviews": 156,
+    "city": "Miraflores",
+    "type": "Restaurante"
+  },
+  {
+    "name": "Osso Carnicería",
+    "address": "Av. La Fontana 750, La Molina",
+    "phone": "+5113654455",
+    "website": "www.osso.com",
+    "rating": 4.6,
+    "reviews": 289,
+    "city": "La Molina",
+    "type": "Parrilla"
+  },
+  {
+    "name": "Maido",
+    "address": "Av. San Martín 101, Miraflores",
+    "phone": "+5114245566",
+    "website": "www.maido.com",
+    "rating": 4.8,
+    "reviews": 412,
+    "city": "Miraflores",
+    "type": "Nikkei"
+  },
+  {
+    "name": "Punto Azul",
+    "address": "C. Santa Rosa 301, San Isidro",
+    "phone": "+5112213344",
+    "website": "",
+    "rating": 4.2,
+    "reviews": 89,
+    "city": "San Isidro",
+    "type": "Cevichería"
+  },
+  {
+    "name": "La Locanda",
+    "address": "Av. Paz Soldán 160, San Isidro",
+    "phone": "+5112223344",
+    "website": "www.lalocanda.com",
+    "rating": 4.4,
+    "reviews": 167,
+    "city": "San Isidro",
+    "type": "Italiana"
+  },
+  {
+    "name": "Central",
+    "address": "Av. Pedro de Osma 301, Barranco",
+    "phone": "+5114245566",
+    "website": "www.centralrestaurante.com",
+    "rating": 4.9,
+    "reviews": 892,
+    "city": "Barranco",
+    "type": "Alta Cocina"
+  },
+  {
+    "name": "Mérito",
+    "address": "Av. Javier Prado Este 4600, Santiago de Surco",
+    "phone": "+5114455667",
+    "website": "www.merito.com",
+    "rating": 4.7,
+    "reviews": 234,
+    "city": "Santiago de Surco",
+    "type": "Venezolana"
+  },
+  {
+    "name": "Isolina",
+    "address": "Av. José Santos Chocano 134, Barranco",
+    "phone": "+5114245566",
+    "website": "www.isolina.com",
+    "rating": 4.5,
+    "reviews": 189,
+    "city": "Barranco",
+    "type": "Criolla"
+  },
+  {
+    "name": "El Pan de la Chola",
+    "address": "Av. Pedro de Osma 102, Barranco",
+    "phone": "+5114466778",
+    "website": "www.pandelachola.com",
+    "rating": 4.7,
+    "reviews": 312,
+    "city": "Barranco",
+    "type": "Panadería"
+  },
+  {
+    "name": "Café de Lima",
+    "address": "Jr. de la Unión 456, Lima Centro",
+    "phone": "+5113322110",
+    "website": "www.cafedelima.com",
+    "rating": 3.5,
+    "reviews": 32,
+    "city": "Lima Centro",
+    "type": "Cafetería"
+  },
+  {
+    "name": "La Bateria",
+    "address": "Av. Grau 456, Barranco",
+    "phone": "+5114455667",
+    "website": "www.labateria.com",
+    "rating": 4.3,
+    "reviews": 98,
+    "city": "Barranco",
+    "type": "Cafetería"
+  },
+  {
+    "name": "Costazul",
+    "address": "Av. Benavides 2855, Santiago de Surco",
+    "phone": "+5114455667",
+    "website": "www.costazul.com",
+    "rating": 4.1,
+    "reviews": 67,
+    "city": "Santiago de Surco",
+    "type": "Cevichería"
+  },
+  {
+    "name": "El Verdugo",
+    "address": "Av. El Polo 810, Santiago de Surco",
+    "phone": "+5114455667",
+    "website": "www.elverdugo.com",
+    "rating": 4.4,
+    "reviews": 145,
+    "city": "Santiago de Surco",
+    "type": "Parrilla"
+  },
+  {
+    "name": "Punto Azul Centro",
+    "address": "Jr. Carabaya 220, Lima Centro",
+    "phone": "+5113322110",
+    "website": "",
+    "rating": 3.9,
+    "reviews": 78,
+    "city": "Lima Centro",
+    "type": "Cevichería"
+  },
+  {
+    "name": "Sanguichería Nico",
+    "address": "Jr. Camaná 245, Lima Centro",
+    "phone": "+5113322110",
+    "website": "www.nico.com",
+    "rating": 4.0,
+    "reviews": 112,
+    "city": "Lima Centro",
+    "type": "Sánguches"
+  }
+]
