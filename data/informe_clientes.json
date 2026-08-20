@@ -1,0 +1,100 @@
+{
+  "google": [
+    {
+      "query": "restaurantes cerca de mí Lima",
+      "volumen_mensual": 45000
+    },
+    {
+      "query": "dónde comer hoy Lima",
+      "volumen_mensual": 32000
+    },
+    {
+      "query": "mejores cevicherías Lima",
+      "volumen_mensual": 18000
+    },
+    {
+      "query": "restaurantes baratos Lima",
+      "volumen_mensual": 22000
+    },
+    {
+      "query": "restaurantes románticos Lima",
+      "volumen_mensual": 12000
+    },
+    {
+      "query": "delivery Lima",
+      "volumen_mensual": 35000
+    },
+    {
+      "query": "buffet Lima",
+      "volumen_mensual": 8500
+    },
+    {
+      "query": "brunch Lima domingo",
+      "volumen_mensual": 6200
+    }
+  ],
+  "redes_sociales": [
+    {
+      "plataforma": "Instagram",
+      "hashtag": "#LimaFoodie",
+      "seguidores": 45000
+    },
+    {
+      "plataforma": "Instagram",
+      "hashtag": "#ComidaPeruana",
+      "seguidores": 32000
+    },
+    {
+      "plataforma": "Instagram",
+      "hashtag": "#RestaurantesLima",
+      "seguidores": 18000
+    },
+    {
+      "plataforma": "Facebook",
+      "grupo": "Foodies Lima Perú",
+      "miembros": 25000
+    },
+    {
+      "plataforma": "Facebook",
+      "grupo": "Restaurantes Lima",
+      "miembros": 15000
+    },
+    {
+      "plataforma": "TikTok",
+      "hashtag": "#LimaFood",
+      "vistas": 850000
+    },
+    {
+      "plataforma": "Twitter",
+      "hashtag": "#DondeComerLima",
+      "tweets": 12000
+    }
+  ],
+  "tripadvisor": [
+    {
+      "query": "Best restaurants in Lima",
+      "busquedas_mensuales": 28000
+    },
+    {
+      "query": "Where to eat in Miraflores",
+      "busquedas_mensuales": 15000
+    },
+    {
+      "query": "Lima restaurant reviews",
+      "busquedas_mensuales": 12000
+    },
+    {
+      "query": "Cevicheria Lima",
+      "busquedas_mensuales": 8500
+    },
+    {
+      "query": "Fine dining Lima",
+      "busquedas_mensuales": 6200
+    }
+  ],
+  "resumen": {
+    "total_busquedas_google": 178700,
+    "total_alcance_social": 135000,
+    "oportunidades_estimadas": 1787
+  }
+}
