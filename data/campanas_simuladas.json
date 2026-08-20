@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "restaurante": "Cevichería El Puerto",
+    "distrito": "Miraflores",
+    "telefono": "+5112425555",
+    "mensaje_enviado": "Hola, somos Lima Automa. ¿Les gustaría recibir más clientes?",
+    "respuesta": {
+      "tipo": "sin_respuesta",
+      "mensaje": null,
+      "accion": "seguimiento"
+    },
+    "fecha": "2026-08-14 03:23",
+    "estado": "sin_respuesta"
+  },
+  {
+    "id": 2,
+    "restaurante": "La Mar Cevichería",
+    "distrito": "Miraflores",
+    "telefono": "+5114245566",
+    "mensaje_enviado": "Hola, somos Lima Automa. ¿Les gustaría recibir más clientes?",
+    "respuesta": {
+      "tipo": "sin_respuesta",
+      "mensaje": null,
+      "accion": "seguimiento"
+    },
+    "fecha": "2026-08-13 03:23",
+    "estado": "sin_respuesta"
+  },
+  {
+    "id": 3,
+    "restaurante": "El Bodegón",
+    "distrito": "Miraflores",
+    "telefono": "+5114212233",
+    "mensaje_enviado": "Hola, somos Lima Automa. ¿Les gustaría recibir más clientes?",
+    "respuesta": {
+      "tipo": "no_interesado",
+      "mensaje": "No estamos interesados, gracias.",
+      "accion": "agradecer"
+    },
+    "fecha": "2026-08-19 03:23",
+    "estado": "no_interesado"
+  },
+  {
+    "id": 4,
+    "restaurante": "Osso Carnicería",
+    "distrito": "La Molina",
+    "telefono": "+5113654455",
+    "mensaje_enviado": "Hola, somos Lima Automa. ¿Les gustaría recibir más clientes?",
+    "respuesta": {
+      "tipo": "no_interesado",
+      "mensaje": "No estamos interesados, gracias.",
+      "accion": "agradecer"
+    },
+    "fecha": "2026-08-17 03:23",
+    "estado": "no_interesado"
+  },
+  {
+    "id": 5,
+    "restaurante": "Maido",
+    "distrito": "Miraflores",
+    "telefono": "+5114245566",
+    "mensaje_enviado": "Hola, somos Lima Automa. ¿Les gustaría recibir más clientes?",
+    "respuesta": {
+      "tipo": "interes_medio",
+      "mensaje": "Dígame más, ¿cuál es el costo?",
+      "accion": "enviar_info"
+    },
+    "fecha": "2026-08-13 03:23",
+    "estado": "interes_medio"
+  },
+  {
+    "id": 6,
+    "restaurante": "Punto Azul",
+    "distrito": "San Isidro",
+    "telefono": "+5112213344",
+    "mensaje_enviado": "Hola, somos Lima Automa. ¿Les gustaría recibir más clientes?",
+    "respuesta": {
+      "tipo": "sin_respuesta",
+      "mensaje": null,
+      "accion": "seguimiento"
+    },
+    "fecha": "2026-08-20 03:23",
+    "estado": "sin_respuesta"
+  },
+  {
+    "id": 7,
+    "restaurante": "La Locanda",
+    "distrito": "San Isidro",
+    "telefono": "+5112223344",
+    "mensaje_enviado": "Hola, somos Lima Automa. ¿Les gustaría recibir más clientes?",
+    "respuesta": {
+      "tipo": "interes_alto",
+      "mensaje": "¡Hola! Me interesa. ¿Cómo funciona?",
+      "accion": "agendar_llamada"
+    },
+    "fecha": "2026-08-13 03:23",
+    "estado": "interes_alto"
+  },
+  {
+    "id": 8,
+    "restaurante": "Central",
+    "distrito": "Barranco",
+    "telefono": "+5114245566",
+    "mensaje_enviado": "Hola, somos Lima Automa. ¿Les gustaría recibir más clientes?",
+    "respuesta": {
+      "tipo": "interes_alto",
+      "mensaje": "¡Hola! Me interesa. ¿Cómo funciona?",
+      "accion": "agendar_llamada"
+    },
+    "fecha": "2026-08-15 03:23",
+    "estado": "interes_alto"
+  },
+  {
+    "id": 9,
+    "restaurante": "Mérito",
+    "distrito": "Santiago de Surco",
+    "telefono": "+5114455667",
+    "mensaje_enviado": "Hola, somos Lima Automa. ¿Les gustaría recibir más clientes?",
+    "respuesta": {
+      "tipo": "no_interesado",
+      "mensaje": "No estamos interesados, gracias.",
+      "accion": "agradecer"
+    },
+    "fecha": "2026-08-17 03:23",
+    "estado": "no_interesado"
+  },
+  {
+    "id": 10,
+    "restaurante": "Isolina",
+    "distrito": "Barranco",
+    "telefono": "+5114245566",
+    "mensaje_enviado": "Hola, somos Lima Automa. ¿Les gustaría recibir más clientes?",
+    "respuesta": {
+      "tipo": "no_interesado",
+      "mensaje": "No estamos interesados, gracias.",
+      "accion": "agradecer"
+    },
+    "fecha": "2026-08-14 03:23",
+    "estado": "no_interesado"
+  }
+]
