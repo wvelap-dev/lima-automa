@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lima Automa - Simulador Online</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; color: white; }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        
+        header {
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        h1 { color: #00d4ff; font-size: 28px; }
+        h2 { color: #00d4ff; margin: 20px 0; font-size: 20px; }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 12px 24px;
+            background: #16213e;
+            border: 2px solid #00d4ff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .tab:hover, .tab.active {
+            background: #00d4ff;
+            color: #1a1a2e;
+        }
+        
+        .panel {
+            display: none;
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .panel.active { display: block; }
+        
+        /* Chat Simulator */
+        .chat-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+            height: 500px;
+        }
+        
+        .chat-list {
+            background: #0a0a1a;
+            border-radius: 10px;
+            padding: 15px;
+            overflow-y: auto;
+        }
+        
+        .chat-item {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+        
+        .chat-item:hover, .chat-item.active {
+            background: #16213e;
+            border-left-color: #00d4ff;
+        }
+        
+        .chat-item .name { font-weight: bold; color: #00d4ff; }
+        .chat-item .status { font-size: 12px; color: #888; }
+        
+        .chat-window {
+            background: #0a0a1a;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-header {
+            padding: 15px;
+            background: #16213e;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+        }
+        
+        .message {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .message.bot {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: #1a1a2e;
+            margin-right: auto;
+        }
+        
+        .message.user {
+            background: #16213e;
+            margin-left: auto;
+        }
+        
+        .chat-input {
+            padding: 15px;
+            background: #16213e;
+            border-radius: 0 0 10px 10px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            background: #0a0a1a;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .chat-input button {
+            padding: 12px 24px;
+            background: #00d4ff;
+            border: none;
+            border-radius: 20px;
+            color: #1a1a2e;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        /* Campaign Simulator */
+        .campaign-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .restaurant-card {
+            background: #0a0a1a;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .restaurant-card:hover {
+            border-color: #00d4ff;
+            transform: translateY(-5px);
+        }
+        
+        .restaurant-card .name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+        
+        .restaurant-card .info {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+        
+        .restaurant-card .phone {
+            font-size: 16px;
+            color: #00ff88;
+            margin: 10px 0;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary { background: #00d4ff; color: #1a1a2e; }
+        .btn-success { background: #00ff88; color: #1a1a2e; }
+        .btn-warning { background: #ffaa00; color: #1a1a2e; }
+        
+        .btn:hover { transform: scale(1.05); }
+        
+        /* Dashboard */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: #0a0a1a;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stat-card h3 {
+            color: #888;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        .stat-card .number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+        
+        .stat-card .label {
+            font-size: 11px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #16213e;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d4ff, #00ff88);
+            transition: width 0.5s;
+        }
+        
+        .log-container {
+            background: #0a0a1a;
+            border-radius: 10px;
+            padding: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        
+        .log-entry {
+            padding: 5px 0;
+            border-bottom: 1px solid #16213e;
+        }
+        
+        .log-time { color: #666; }
+        .log-success { color: #00ff88; }
+        .log-error { color: #ff4444; }
+        .log-info { color: #00d4ff; }
+        
+        .simulation-status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .status-running { background: #00ff88; color: #1a1a2e; }
+        .status-paused { background: #ffaa00; color: #1a1a2e; }
+        .status-stopped { background: #ff4444; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lima Automa - Simulador Online</h1>
+            <p style="color: #888;">Modo DEMO - Sin contacto real</p>
+        </header>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="showPanel('chatbot')">Chatbot Claudia</div>
+            <div class="tab" onclick="showPanel('campaign')">Campaña WhatsApp</div>
+            <div class="tab" onclick="showPanel('dashboard')">Dashboard</div>
+            <div class="tab" onclick="showPanel('restaurants')">Base de Datos</div>
+        </div>
+        
+        <!-- Chatbot Panel -->
+        <div id="chatbot" class="panel active">
+            <h2>Simulador de Chatbot - Claudia de Lima Automa</h2>
+            <div class="chat-container">
+                <div class="chat-list">
+                    <h3 style="margin-bottom: 15px; color: #00d4ff;">Restaurantes</h3>
+                    <div class="chat-item active" onclick="selectChat(0)">
+                        <div class="name">Cevichería El Puerto</div>
+                        <div class="status">● En línea</div>
+                    </div>
+                    <div class="chat-item" onclick="selectChat(1)">
+                        <div class="name">La Mar Cevichería</div>
+                        <div class="status">● En línea</div>
+                    </div>
+                    <div class="chat-item" onclick="selectChat(2)">
+                        <div class="name">Punto Azul</div>
+                        <div class="status">○ Desconectado</div>
+                    </div>
+                    <div class="chat-item" onclick="selectChat(3)">
+                        <div class="name">Central</div>
+                        <div class="status">● En línea</div>
+                    </div>
+                    <div class="chat-item" onclick="selectChat(4)">
+                        <div class="name">Rafael Osterling</div>
+                        <div class="status">● En línea</div>
+                    </div>
+                </div>
+                
+                <div class="chat-window">
+                    <div class="chat-header">
+                        <div>
+                            <strong id="chat-name">Cevichería El Puerto</strong>
+                            <div style="font-size: 12px; color: #888;" id="chat-status">En línea - Miraflores</div>
+                        </div>
+                        <span class="simulation-status status-running">SIMULACIÓN</span>
+                    </div>
+                    
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message bot">
+                            ¡Hola! Soy Claudia de Lima Automa. 👋
+                            <br><br>
+                            Vi que tienen un restaurante increíble en Miraflores. Tengo una propuesta que les puede ayudar a conseguir más clientes.
+                            <br><br>
+                            ¿Les gustaría que les explique más?
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="user-input" placeholder="Escribe un mensaje..." onkeypress="handleKeyPress(event)">
+                        <button onclick="sendMessage()">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Campaign Panel -->
+        <div id="campaign" class="panel">
+            <h2>Simulador de Campaña WhatsApp</h2>
+            <p style="color: #888; margin-bottom: 20px;">Simula el envío de mensajes a restaurantes</p>
+            
+            <div style="margin-bottom: 20px;">
+                <button class="btn btn-primary" onclick="startCampaign()">▶ Iniciar Campaña</button>
+                <button class="btn btn-warning" onclick="pauseCampaign()">⏸ Pausar</button>
+                <button class="btn" style="background: #ff4444; color: white;" onclick="stopCampaign()">⏹ Detener</button>
+                <span id="campaign-status" class="simulation-status status-stopped" style="margin-left: 20px;">DETENIDA</span>
+            </div>
+            
+            <div class="campaign-grid" id="campaign-grid">
+                <!-- Restaurantes se llenan dinámicamente -->
+            </div>
+            
+            <h2 style="margin-top: 30px;">Log de Actividad</h2>
+            <div class="log-container" id="campaign-log">
+                <div class="log-entry">
+                    <span class="log-time">[00:00:00]</span>
+                    <span class="log-info">Sistema listo para iniciar campaña</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dashboard Panel -->
+        <div id="dashboard" class="panel">
+            <h2>Dashboard en Vivo</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>TOTAL RESTAURANTES</h3>
+                    <div class="number" id="stat-total">1,712</div>
+                    <div class="label">Base de datos completa</div>
+                </div>
+                <div class="stat-card">
+                    <h3>CON TELÉFONO</h3>
+                    <div class="number" id="stat-phones">471</div>
+                    <div class="label">Contactables</div>
+                </div>
+                <div class="stat-card">
+                    <h3>MENSAJES ENVIADOS</h3>
+                    <div class="number" id="stat-sent">0</div>
+                    <div class="label">Campaña actual</div>
+                </div>
+                <div class="stat-card">
+                    <h3>RESPUESTAS</h3>
+                    <div class="number" id="stat-responses">0</div>
+                    <div class="label">Interesados</div>
+                </div>
+                <div class="stat-card">
+                    <h3>TASA RESPUESTA</h3>
+                    <div class="number" id="stat-rate">0%</div>
+                    <div class="label">Conversión</div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <h3 style="color: #00d4ff; margin-bottom: 15px;">Progreso de Campaña</h3>
+                    <div style="margin-bottom: 10px;">
+                        <span>Mensajes enviados</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-sent" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <span>Respuestas recibidas</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-responses" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Citas agendadas</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-meetings" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="color: #00d4ff; margin-bottom: 15px;">Distribución de Respuestas</h3>
+                    <canvas id="responseChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Restaurants Panel -->
+        <div id="restaurants" class="panel">
+            <h2>Base de Datos - Restaurantes</h2>
+            <p style="color: #888; margin-bottom: 20px;">1,712 restaurantes en 43 distritos de Lima</p>
+            
+            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <input type="text" id="search-input" placeholder="Buscar restaurante..." style="padding: 12px; border: none; border-radius: 8px; background: #0a0a1a; color: white; flex: 1;">
+                <button class="btn btn-primary" onclick="searchRestaurants()">Buscar</button>
+            </div>
+            
+            <div id="restaurants-list" style="max-height: 400px; overflow-y: auto;">
+                <!-- Lista se llena dinámicamente -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Data
+        const restaurants = [
+            { name: "Cevichería El Puerto", phone: "+5112425555", city: "Miraflores", type: "Cevichería" },
+            { name: "La Mar Cevichería", phone: "+5114245566", city: "Miraflores", type: "Cevichería" },
+            { name: "Punto Azul", phone: "+5112213344", city: "San Isidro", type: "Cevichería" },
+            { name: "Central", phone: "+5114288878", city: "Barranco", type: "Alta Cocina" },
+            { name: "Rafael Osterling", phone: "+5112424149", city: "Miraflores", type: "Peruana" },
+            { name: "Mayta", phone: "+5114226708", city: "Miraflores", type: "Peruana" },
+            { name: "Costazul Seafood", phone: "+5114078536", city: "Surco", type: "Mariscos" },
+            { name: "Rustica", phone: "+5114440888", city: "Surco", type: "Criolla" },
+            { name: "Punto Azul 2", phone: "+5114458078", city: "Surco", type: "Cevichería" },
+            { name: "Marhaba", phone: "+51927576861", city: "Lince", type: "Árabe" }
+        ];
+        
+        const chatResponses = [
+            "¡Hola! Me interesa. ¿Cómo funciona?",
+            "Dígame más, ¿cuál es el costo?",
+            "No estamos interesados, gracias.",
+            "¿Pueden enviarme más información?",
+            "¿Cuándo podemos reunirnos?"
+        ];
+        
+        let campaignRunning = false;
+        let campaignInterval = null;
+        let sentCount = 0;
+        let responseCount = 0;
+        
+        // Tab navigation
+        function showPanel(panelId) {
+            document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            
+            document.getElementById(panelId).classList.add('active');
+            event.target.classList.add('active');
+            
+            if (panelId === 'restaurants') loadRestaurants();
+        }
+        
+        // Chat functions
+        function selectChat(index) {
+            document.querySelectorAll('.chat-item').forEach(item => item.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            
+            document.getElementById('chat-name').textContent = restaurants[index].name;
+            document.getElementById('chat-status').textContent = `En línea - ${restaurants[index].city}`;
+            
+            document.getElementById('chat-messages').innerHTML = `
+                <div class="message bot">
+                    ¡Hola! Soy Claudia de Lima Automa. 👋
+                    <br><br>
+                    Vi que tienen un restaurante increíble en ${restaurants[index].city}. Tengo una propuesta que les puede ayudar a conseguir más clientes.
+                    <br><br>
+                    ¿Les gustaría que les explique más?
+                </div>
+            `;
+        }
+        
+        function sendMessage() {
+            const input = document.getElementById('user-input');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            const messagesDiv = document.getElementById('chat-messages');
+            
+            // User message
+            messagesDiv.innerHTML += `
+                <div class="message user">${message}</div>
+            `;
+            
+            input.value = '';
+            
+            // Bot response
+            setTimeout(() => {
+                const responses = [
+                    "¡Perfecto! Les explico: nosotros nos encargamos de traer clientes a su restaurante. Ellos pagan directamente, y ustedes nos pagan una pequeña comisión solo por cada cliente que les traemos. Sin costos fijos, sin sorpresas.",
+                    "El servicio funciona así: 1) Nosotros promocionamos su restaurante en redes sociales y Google. 2) Los clientes reservan a través de nuestra plataforma. 3) Ustedes atienden y nosotros cobramos nuestra comisión del 20%.",
+                    "Entiendo. ¿Le gustaría que le enviemos una propuesta personalizada? Podemos hacer una reunión virtual para explicarle todos los detalles.",
+                    "No hay problema. Si en algún momento cambian de opinión, pueden contactarnos. ¡Éxitos con el restaurante! 🍽️"
+                ];
+                
+                const response = responses[Math.floor(Math.random() * responses.length)];
+                
+                messagesDiv.innerHTML += `
+                    <div class="message bot">${response}</div>
+                `;
+                
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            }, 1000);
+        }
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') sendMessage();
+        }
+        
+        // Campaign functions
+        function loadCampaignGrid() {
+            const grid = document.getElementById('campaign-grid');
+            grid.innerHTML = restaurants.map((r, i) => `
+                <div class="restaurant-card" id="card-${i}">
+                    <div class="name">${r.name}</div>
+                    <div class="info">${r.type} - ${r.city}</div>
+                    <div class="phone">${r.phone}</div>
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <button class="btn btn-primary" onclick="simulateSend(${i})">Enviar Mensaje</button>
+                        <button class="btn btn-success" onclick="simulateResponse(${i})">Simular Respuesta</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function simulateSend(index) {
+            const card = document.getElementById(`card-${index}`);
+            card.style.borderColor = '#00ff88';
+            
+            addLog(`Mensaje enviado a ${restaurants[index].name}`, 'success');
+            sentCount++;
+            updateStats();
+        }
+        
+        function simulateResponse(index) {
+            const responses = ["interes_alto", "interes_medio", "sin_respuesta", "no_interesado"];
+            const response = responses[Math.floor(Math.random() * responses.length)];
+            
+            const card = document.getElementById(`card-${index}`);
+            
+            switch(response) {
+                case "interes_alto":
+                    card.style.borderColor = '#00ff88';
+                    addLog(`${restaurants[index].name}: ¡Interesado! Quiere reunión`, 'success');
+                    responseCount++;
+                    break;
+                case "interes_medio":
+                    card.style.borderColor = '#ffaa00';
+                    addLog(`${restaurants[index].name}: Interesado, pregunta precio`, 'info');
+                    responseCount++;
+                    break;
+                case "sin_respuesta":
+                    card.style.borderColor = '#666';
+                    addLog(`${restaurants[index].name}: Sin respuesta`, 'info');
+                    break;
+                case "no_interesado":
+                    card.style.borderColor = '#ff4444';
+                    addLog(`${restaurants[index].name}: No interesado`, 'error');
+                    break;
+            }
+            
+            updateStats();
+        }
+        
+        function startCampaign() {
+            campaignRunning = true;
+            document.getElementById('campaign-status').textContent = 'EJECUTANDO';
+            document.getElementById('campaign-status').className = 'simulation-status status-running';
+            
+            addLog('Campaña iniciada', 'info');
+            
+            let index = 0;
+            campaignInterval = setInterval(() => {
+                if (index < restaurants.length && campaignRunning) {
+                    simulateSend(index);
+                    setTimeout(() => simulateResponse(index), 1000);
+                    index++;
+                } else {
+                    clearInterval(campaignInterval);
+                    addLog('Campaña completada', 'info');
+                }
+            }, 2000);
+        }
+        
+        function pauseCampaign() {
+            campaignRunning = false;
+            clearInterval(campaignInterval);
+            document.getElementById('campaign-status').textContent = 'PAUSADA';
+            document.getElementById('campaign-status').className = 'simulation-status status-paused';
+            addLog('Campaña pausada', 'info');
+        }
+        
+        function stopCampaign() {
+            campaignRunning = false;
+            clearInterval(campaignInterval);
+            document.getElementById('campaign-status').textContent = 'DETENIDA';
+            document.getElementById('campaign-status').className = 'simulation-status status-stopped';
+            addLog('Campaña detenida', 'error');
+        }
+        
+        function addLog(message, type) {
+            const log = document.getElementById('campaign-log');
+            const time = new Date().toLocaleTimeString();
+            log.innerHTML += `
+                <div class="log-entry">
+                    <span class="log-time">[${time}]</span>
+                    <span class="log-${type}">${message}</span>
+                </div>
+            `;
+            log.scrollTop = log.scrollHeight;
+        }
+        
+        function updateStats() {
+            document.getElementById('stat-sent').textContent = sentCount;
+            document.getElementById('stat-responses').textContent = responseCount;
+            document.getElementById('stat-rate').textContent = sentCount > 0 ? 
+                Math.round((responseCount / sentCount) * 100) + '%' : '0%';
+            
+            document.getElementById('progress-sent').style.width = 
+                Math.min((sentCount / restaurants.length) * 100, 100) + '%';
+            document.getElementById('progress-responses').style.width = 
+                Math.min((responseCount / restaurants.length) * 100, 100) + '%';
+        }
+        
+        // Restaurants list
+        function loadRestaurants() {
+            const list = document.getElementById('restaurants-list');
+            list.innerHTML = restaurants.map(r => `
+                <div style="padding: 15px; background: #0a0a1a; border-radius: 8px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <strong style="color: #00d4ff;">${r.name}</strong>
+                        <div style="font-size: 12px; color: #888;">${r.type} - ${r.city}</div>
+                    </div>
+                    <div style="color: #00ff88;">${r.phone}</div>
+                </div>
+            `).join('');
+        }
+        
+        function searchRestaurants() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filtered = restaurants.filter(r => 
+                r.name.toLowerCase().includes(query) || 
+                r.city.toLowerCase().includes(query)
+            );
+            
+            const list = document.getElementById('restaurants-list');
+            list.innerHTML = filtered.map(r => `
+                <div style="padding: 15px; background: #0a0a1a; border-radius: 8px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <strong style="color: #00d4ff;">${r.name}</strong>
+                        <div style="font-size: 12px; color: #888;">${r.type} - ${r.city}</div>
+                    </div>
+                    <div style="color: #00ff88;">${r.phone}</div>
+                </div>
+            `).join('');
+        }
+        
+        // Initialize
+        loadCampaignGrid();
+        loadRestaurants();
+    </script>
+</body>
+</html>
