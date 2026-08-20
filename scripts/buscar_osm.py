@@ -42,12 +42,14 @@ def buscar_restaurantes_geoapify(distrito="Miraflores", radio=1000):
     # Geoapify Places API (gratis 3,000/día)
     url = "https://api.geoapify.com/v2/places"
     
-    # Sin API key - usar tier gratuito
+    API_KEY = "9f42bcf9bd064b4d9365ef9ff6604e76"
+    
     params = {
         "categories": "catering.restaurant",
         "filter": f"circle:{lon},{lat},{radio}",
         "limit": 50,
-        "lang": "es"
+        "lang": "es",
+        "apiKey": API_KEY
     }
     
     try:
